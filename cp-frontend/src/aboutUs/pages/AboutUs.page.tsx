@@ -1,14 +1,13 @@
 import { NavLink } from "react-router";
 import styles from "./aboutUs.module.scss";
-import { clsx } from "clsx";
 import { HOME_ROUTE } from "../../home/pages/home.route";
 import { Carousel } from "../../shared/compontents/carousel/Carousel";
 
 export const AboutUs = () => {
 	return (
-		<div className={clsx(styles["p-aboutUs"])}>
-			<div className={clsx(styles["p-aboutUs__header"])}>
-				<div className={clsx(styles["p-aboutUs__header__text"])}>
+		<div className={styles["p-aboutUs"]}>
+			<div className={styles["p-aboutUs__header"]}>
+				<div className={styles["p-aboutUs__header__text"]}>
 					<h1>EHB STUDENTS</h1>
 					<p>
 						EHB-studenten Front-End Development werken dit semester met React aan een parallax website rond het thema sprookjes.

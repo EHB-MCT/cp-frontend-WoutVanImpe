@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import styles from "../../style.module.scss";
 import { NavLink } from "react-router";
 import { HOME_ROUTE } from "../../../home/pages/home.route";
@@ -7,11 +6,11 @@ import { ABOUT_ROUTE } from "../../../aboutUs/pages/aboutUs.route";
 
 export const Navigation = () => {
 	return (
-		<div className={clsx(styles["navigation-bar"])}>
+		<div className={styles["navigation-bar"]}>
 			<NavLink to={HOME_ROUTE.path}>
-				<img className={clsx(styles["navigation-bar__img"])} src="./" alt="logo" />
+				<img className={styles["navigation-bar__img"]} src="./" alt="logo" />
 			</NavLink>
-			<nav className={clsx(styles["navigation-bar__nav"])}>
+			<nav className={styles["navigation-bar__nav"]}>
 				<NavLink to={HOME_ROUTE.path}>
 					<p>SPROOKJES</p>
 				</NavLink>
@@ -21,8 +20,8 @@ export const Navigation = () => {
 				<NavLink to={ABOUT_ROUTE.path}>
 					<p>ABOUT US</p>
 				</NavLink>
-				<button className={clsx(styles["navigation-bar__searchButton"])}>
-					<img src="./" alt="logo" />
+				<button className={styles["navigation-bar__searchButton"]}>
+					<img src="./" alt="zoeken" />
 				</button>
 			</nav>
 		</div>

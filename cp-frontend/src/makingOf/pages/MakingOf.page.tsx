@@ -1,19 +1,18 @@
 import { NavLink } from "react-router";
 import styles from "./makingOf.module.scss";
-import { clsx } from "clsx";
 
 export const MakingOf = () => {
 	return (
-		<div className={clsx(styles["p-makingOf"])}>
+		<div className={styles["p-makingOf"]}>
 			<h1>MAKING OF</h1>
-			<div className={clsx(styles["p-makingOf__banner"])} style={{ backgroundImage: "url('http://i54.tinypic.com/4zuxif.jpg')" }}>
-				<div className={clsx(styles["p-makingOf__banner__text"])}>
+			<div className={styles["p-makingOf__banner"]} style={{ backgroundImage: "url('http://i54.tinypic.com/4zuxif.jpg')" }}>
+				<div className={styles["p-makingOf__banner__text"]}>
 					<h2>Sprookje</h2>
 					<p>Student</p>
 				</div>
 			</div>
 
-			<div className={clsx(styles["p-makingOf__info"])}>
+			<div className={styles["p-makingOf__info"]}>
 				<div>
 					<div>
 						<h5>Verhaal</h5>
