@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import styles from "./aboutUs.module.scss";
-import { HOME_ROUTE } from "../../home/pages/home.route";
-import { Carousel } from "../../shared/compontents/carousel/Carousel";
+import { HOME_ROUTE } from "~home/pages/home.route";
+import { Carousel } from "~shared/compontents/carousel/Carousel";
 
 export const AboutUs = () => {
 	return (

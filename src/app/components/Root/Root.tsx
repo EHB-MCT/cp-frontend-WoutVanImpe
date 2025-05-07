@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HOME_ROUTE } from "../../../home/pages/home.route.tsx";
-import { MAKINGOF_ROUTE } from "../../../makingOf/pages/makingOf.route.tsx";
-import { ABOUT_ROUTE } from "../../../aboutUs/pages/aboutUs.route.tsx";
+import { HOME_ROUTE } from "~home/pages/home.route.tsx";
+import { MAKINGOF_ROUTE } from "~makingOf/pages/makingOf.route.tsx";
+import { ABOUT_ROUTE } from "~aboutUs/pages/aboutUs.route.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import { App } from "../App/App.tsx";
 

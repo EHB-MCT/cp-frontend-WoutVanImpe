@@ -1,4 +1,4 @@
-import styles from ".././../pages/home.module.scss";
+import styles from "~home/pages/home.module.scss";
 import { FC } from "react";
 
 export const SmallStoryCard: FC = () => {

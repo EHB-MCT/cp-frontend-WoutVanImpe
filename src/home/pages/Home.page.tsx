@@ -1,5 +1,5 @@
 import styles from "./home.module.scss";
-import { SmallStoryCard } from "../components/smallStoryCard/SmallStoryCard";
+import { SmallStoryCard } from "~home/components/smallStoryCard/SmallStoryCard";
 
 export const Home = () => {
 	const storyArray: string[] = ["a", "b", "c"];
