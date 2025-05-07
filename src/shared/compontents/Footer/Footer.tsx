@@ -1,6 +1,6 @@
-import styles from "../../style.module.scss";
+import styles from "~shared/style.module.scss";
 import { NavLink } from "react-router";
-import { ABOUT_ROUTE } from "../../../aboutUs/pages/aboutUs.route";
+import { ABOUT_ROUTE } from "~aboutUs/pages/aboutUs.route";
 
 export const Footer = () => {
 	return (

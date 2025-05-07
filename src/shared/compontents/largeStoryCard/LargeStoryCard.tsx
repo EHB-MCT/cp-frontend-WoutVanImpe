@@ -1,4 +1,4 @@
-import styles from "../../style.module.scss";
+import styles from "~shared/style.module.scss";
 import { FC } from "react";
 
 export const LargeStoryCard: FC = () => {
