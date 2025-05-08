@@ -7,7 +7,7 @@ export const Footer = () => {
 		<div className={styles["footer"]}>
 			<img src="./logo.svg" alt="logo" />
 			<div>
-				<p>tekst</p>
+				<p>23 studenten van de opleiding MCT kozen voor het vak Front-End Design. Met een dosis creativiteit, code en een flinke scheut verbeelding versamelden ze hier al hun sprookjes. Benieuwd wie wij zijn?</p>
 				<NavLink to={ABOUT_ROUTE.path}>
 					<button>
 						<p>About us</p>

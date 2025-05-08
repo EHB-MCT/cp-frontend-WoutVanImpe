@@ -7,10 +7,14 @@ export const App = () => {
 	const page: string = window.location.href;
 	console.log(page);
 	return (
-		<div className={styles[""]}>
-			<div className={styles[""]}>
+		<div>
+			<div className={styles["nav-wrapper"]}>
 				<Navigation />
+			</div>
+			<div className={styles["content-wrapper"]}>
 				<Outlet />
+			</div>
+			<div className={styles["footer-wrapper"]}>
 				<Footer />
 			</div>
 		</div>

@@ -4,6 +4,10 @@
 	justify-content: space-between;
 	align-items: center;
 
+	margin: 0 auto;
+	padding: 20px 50px;
+	max-width: 1200px;
+
 	&__img {
 		width: 100px;
 	}
@@ -37,5 +41,36 @@
 	p {
 		color: black;
 		font-weight: 700;
+	}
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+	padding: 40px 0px;
+
+	max-width: 1200px;
+
+	img {
+		width: 150px;
+		margin-right: 70px;
+	}
+
+	div {
+		width: 60%;
+	}
+
+	button {
+		background-color: black;
+		color: white;
+		font-weight: 700;
+		padding: 10px 60px;
+		border-radius: 60px;
+
+		p {
+			margin: 0;
+		}
 	}
 }
