@@ -1,0 +1,41 @@
+.navigation-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	&__img {
+		width: 100px;
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: end;
+		align-items: center;
+
+		a {
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #8d8d8d;
+		}
+
+		> * {
+			margin-left: 40px;
+		}
+
+		button {
+			background-color: transparent;
+			border: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+.actif {
+	p {
+		color: black;
+		font-weight: 700;
+	}
+}
