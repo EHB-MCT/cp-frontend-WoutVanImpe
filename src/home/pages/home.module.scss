@@ -1,0 +1,48 @@
+.p-home{
+    &__storyList{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 35px;
+    }
+}
+
+.small-story-card {
+	background-color: #ebf5ec;
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	border-radius: 20px;
+
+	&__img {
+		width: 95%;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		border-radius: 20px;
+		align-self: center;
+	}
+
+	&__text {
+		position: relative;
+
+		&__info {
+			margin-top: 10px;
+
+			h3 {
+				font-weight: 700;
+			}
+
+			> * {
+				margin: 0px;
+			}
+		}
+
+		img {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+		}
+	}
+}
