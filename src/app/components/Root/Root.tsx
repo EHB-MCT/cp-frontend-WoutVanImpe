@@ -10,14 +10,14 @@ const queryClient = new QueryClient();
 export const Root = () => {
 	const router = createBrowserRouter([
 		{
-			path: "/",
+			path: "/cp-frontend-WoutVanImpe/",
 			element: <App />,
 			children: [
 				{ path: HOME_ROUTE.path, element: HOME_ROUTE.element },
 				{ path: MAKINGOF_ROUTE.path, element: MAKINGOF_ROUTE.element },
 				{ path: ABOUT_ROUTE.path, element: ABOUT_ROUTE.element },
 				{
-					path: "/cp-frontend-WoutVanImpe/*",
+					path: "*",
 					element: <h1>404: Page not found</h1>,
 				},
 			],
