@@ -17,7 +17,7 @@ export const Root = () => {
 				{ path: MAKINGOF_ROUTE.path, element: MAKINGOF_ROUTE.element },
 				{ path: ABOUT_ROUTE.path, element: ABOUT_ROUTE.element },
 				{
-					path: "*",
+					path: "/*",
 					element: <h1>404: Page not found</h1>,
 				},
 			],
