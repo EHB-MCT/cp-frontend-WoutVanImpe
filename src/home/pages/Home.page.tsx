@@ -1,16 +1,29 @@
 import styles from "./home.module.scss";
 import { SmallStoryCard } from "~home/components/smallStoryCard/SmallStoryCard";
+import { FairytaleType } from "~shared/hooks/fairytale.types";
+import { useGetFairytales } from "~shared/hooks/useGetFairytales.hooks";
+import { LoadingSpinner } from "~shared/components/loadingSpinner/LoadingSpinner";
 
 export const Home = () => {
-	const storyArray: string[] = ["a", "b", "c"];
+	const {
+		data: fairytaleData,
+		isLoading: fairytaleLoading,
+	}: {
+		data: FairytaleType[] | undefined;
+		isLoading: boolean;
+	} = useGetFairytales();
 
-	return (
+	return fairytaleLoading ? (
+		<LoadingSpinner />
+	) : (
 		<div className={styles["p-home"]}>
 			<h1>HOT TODAY</h1>
-			<h1>STORYS</h1>
-			{storyArray.map((story) => (
-				<SmallStoryCard key={story} />
-			))}
+			<h1>STORIES</h1>
+			<div className={styles["p-home__storyList"]}>
+				{fairytaleData?.map((fairytale: FairytaleType) => (
+					<SmallStoryCard key={fairytale.id} data={fairytale} />
+				))}
+			</div>
 		</div>
 	);
 };
