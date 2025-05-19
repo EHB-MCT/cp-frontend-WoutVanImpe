@@ -1,6 +1,6 @@
 import { Home } from "./Home.page";
 
 export const HOME_ROUTE = {
-	path: "/",
+	path: "/cp-frontend-WoutVanImpe/'",
 	element: <Home />,
 };
