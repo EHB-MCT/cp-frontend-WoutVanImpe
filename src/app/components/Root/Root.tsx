@@ -2,13 +2,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HOME_ROUTE } from "~home/pages/home.route.tsx";
 import { MAKINGOF_ROUTE } from "~makingOf/pages/makingOf.route.tsx";
 import { ABOUT_ROUTE } from "~aboutUs/pages/aboutUs.route.tsx";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createHashRouter, RouterProvider } from "react-router";
 import { App } from "../App/App.tsx";
 
 const queryClient = new QueryClient();
 
 export const Root = () => {
-	const router = createBrowserRouter([
+	const router = createHashRouter([
 		{
 			path: "/cp-frontend-WoutVanImpe/",
 			element: <App />,
