@@ -10,7 +10,7 @@ export const Navigation = () => {
 	return (
 		<div className={styles["navigation-bar"]}>
 			<NavLink to={HOME_ROUTE.path}>
-				<img className={styles["navigation-bar__img"]} src="/logo.svg" alt="logo" />
+				<img className={styles["navigation-bar__img"]} src="./logo.svg" alt="logo" />
 			</NavLink>
 			<nav className={styles["navigation-bar__nav"]}>
 				<NavLink to={HOME_ROUTE.path} className={({ isActive }) => (isActive ? styles.actif : "")}>
@@ -23,7 +23,7 @@ export const Navigation = () => {
 					<p>ABOUT US</p>
 				</NavLink>
 				<button>
-					<img src="/search.svg" alt="zoeken" />
+					<img src="./search.svg" alt="zoeken" />
 				</button>
 			</nav>
 		</div>
