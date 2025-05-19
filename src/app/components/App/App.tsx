@@ -1,7 +1,7 @@
 import styles from "./app.module.scss";
-import { Navigation } from "~shared/compontents/Navigation/Navigation";
+import { Navigation } from "~shared/components/Navigation/Navigation";
 import { Outlet } from "react-router";
-import { Footer } from "~shared/compontents/Footer/Footer";
+import { Footer } from "~shared/components/Footer/Footer";
 
 export const App = () => {
 	const page: string = window.location.href;

@@ -1,7 +1,7 @@
-import { NavLink } from "react-router";
 import styles from "./aboutUs.module.scss";
 import { HOME_ROUTE } from "~home/pages/home.route";
-import { Carousel } from "~shared/compontents/carousel/Carousel";
+import { Carousel } from "~shared/components/carousel/Carousel";
+import { ButtonNav } from "~shared/components/buttons-that-navigate/ButtonNav";
 
 export const AboutUs = () => {
 	return (
@@ -14,13 +14,10 @@ export const AboutUs = () => {
 						<br /> Ze ocmbineren technieken en creatieviteit om een interactieve webervaring te creëren met diepte-effecten en animaties.
 						<br /> Zo leren ze React-componenten, state management en visuele effecten toepassen om hun sprookjeswereld tot leven te brengen.
 					</p>
-					<NavLink to={HOME_ROUTE.path}>
-						<button>Bekijk alle sprookjes</button>
-					</NavLink>
+					<ButtonNav navLink={HOME_ROUTE.path} text="Bekijk alle sprookjes" />
 				</div>
 				<img src="" alt="studenten" />
 			</div>
-
 			<h1>HOT TODAY</h1>
 			<Carousel />
 		</div>

@@ -1,4 +1,3 @@
-import { NavLink } from "react-router";
 import styles from "./makingOf.module.scss";
 
 export const MakingOf = () => {
@@ -25,9 +24,7 @@ export const MakingOf = () => {
 				</div>
 				<div>
 					<img src="" alt="sprookje" />
-					<NavLink to="">
-						<button>View Website</button>
-					</NavLink>
+					<button>Lees meer</button>
 				</div>
 			</div>
 

@@ -61,13 +61,16 @@
 	div {
 		width: 60%;
 	}
+}
 
+.navigatingButton {
 	button {
 		background-color: black;
 		color: white;
 		font-weight: 700;
 		padding: 10px 60px;
 		border-radius: 60px;
+		cursor: pointer;
 
 		p {
 			margin: 0;
