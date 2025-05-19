@@ -10,7 +10,7 @@ const queryClient = new QueryClient();
 export const Root = () => {
 	const router = createHashRouter([
 		{
-			path: "/cp-frontend-WoutVanImpe/",
+			path: "/",
 			element: <App />,
 			children: [
 				{ path: HOME_ROUTE.path, element: HOME_ROUTE.element },
