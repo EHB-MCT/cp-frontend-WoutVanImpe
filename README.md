@@ -1,2 +1,17 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/OwWY7ss_)
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=18819281)
+# ER WAS EENS... ✨
+A short description of your project. Aim for 2-3 lines.
+Next, read this example and adapt it to your project.
+If you want to add more sections, please do so after the existing ones (avoid burying your sources under a lot of text!).
+
+Live link: [website.be](website.be) (optional)
+
+## Up & running (optional) 🏃‍➡️
+- This should contain step by step instructions to run your project (delete this section if it's not relevant)
+- Run `php artisan launch:rocket`
+- Login to the test account using these credentials:
+    - User: test
+    - Password: test
+
+## Sources 🗃️
+- https://chatgpt.com/share/681c7bed-40f0-800b-bc9d-262669d798a2
+- 
