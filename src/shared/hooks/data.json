@@ -1,12 +1,50 @@
-{
-	"id": "1",
-	"nameStudent": "Wout Van Impe",
-	"fairytale": "duimelijntje",
-	"fairytaleLink": "link",
-	"description": "",
-	"imgThumbnail": "",
-	"imgBanner": "",
-	"imgsExtra": ["", "", ""],
-	"genre": "horror",
-	"storyFrom": "Charles Perrault"
-}
+[
+	{
+		"id": "1",
+		"nameStudent": "Wout Van Impe",
+		"fairytale": "Blauwbaard",
+		"fairytaleLink": "link",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate ultrices aliquam. Vestibulum purus urna, porta eu facilisis a, dapibus auctor nibh. Suspendisse blandit quis enim non semper. Donec malesuada nibh eu erat placerat, vestibulum dictum dui semper. Nunc vel lacus et orci sagittis malesuada sit amet ut est. Praesent et interdum risus. Quisque consectetur eros vitae condimentum porttitor. Praesent odio arcu, ultrices ut consequat in, ullamcorper a arcu. Suspendisse sed consequat dolor. Sed ac orci vestibulum, posuere neque sit amet, hendrerit libero. Ut luctus id elit et euismod. Proin sed purus sit amet mauris tempus sollicitudin. Nunc rutrum viverra tortor, eu lacinia est cursus semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur odio ligula, efficitur id tincidunt at, vulputate et orci. Integer auctor vitae diam quis varius. Pellentesque ullamcorper fermentum pulvinar. Donec suscipit ullamcorper convallis.",
+		"imgThumbnail": "./thumbnail.png",
+		"imgBanner": "./banner.png",
+		"imgsExtra": ["./extra1.png", "./extra2.png", "./extra3.png", "./extra4.png"],
+		"genre": "horror",
+		"storyFrom": "Charles Perrault"
+	},
+	{
+		"id": "2",
+		"nameStudent": "Wout Van Impe",
+		"fairytale": "Blauwbaard",
+		"fairytaleLink": "link",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate ultrices aliquam. Vestibulum purus urna, porta eu facilisis a, dapibus auctor nibh. Suspendisse blandit quis enim non semper. Donec malesuada nibh eu erat placerat, vestibulum dictum dui semper. Nunc vel lacus et orci sagittis malesuada sit amet ut est. Praesent et interdum risus. Quisque consectetur eros vitae condimentum porttitor. Praesent odio arcu, ultrices ut consequat in, ullamcorper a arcu. Suspendisse sed consequat dolor. Sed ac orci vestibulum, posuere neque sit amet, hendrerit libero. Ut luctus id elit et euismod. Proin sed purus sit amet mauris tempus sollicitudin. Nunc rutrum viverra tortor, eu lacinia est cursus semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur odio ligula, efficitur id tincidunt at, vulputate et orci. Integer auctor vitae diam quis varius. Pellentesque ullamcorper fermentum pulvinar. Donec suscipit ullamcorper convallis.",
+		"imgThumbnail": "./thumbnail.png",
+		"imgBanner": "./banner.png",
+		"imgsExtra": ["./extra1.png", "./extra2.png", "./extra3.png", "./extra4.png"],
+		"genre": "horror",
+		"storyFrom": "Charles Perrault"
+	},
+	{
+		"id": "3",
+		"nameStudent": "Wout Van Impe",
+		"fairytale": "Blauwbaard",
+		"fairytaleLink": "link",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate ultrices aliquam. Vestibulum purus urna, porta eu facilisis a, dapibus auctor nibh. Suspendisse blandit quis enim non semper. Donec malesuada nibh eu erat placerat, vestibulum dictum dui semper. Nunc vel lacus et orci sagittis malesuada sit amet ut est. Praesent et interdum risus. Quisque consectetur eros vitae condimentum porttitor. Praesent odio arcu, ultrices ut consequat in, ullamcorper a arcu. Suspendisse sed consequat dolor. Sed ac orci vestibulum, posuere neque sit amet, hendrerit libero. Ut luctus id elit et euismod. Proin sed purus sit amet mauris tempus sollicitudin. Nunc rutrum viverra tortor, eu lacinia est cursus semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur odio ligula, efficitur id tincidunt at, vulputate et orci. Integer auctor vitae diam quis varius. Pellentesque ullamcorper fermentum pulvinar. Donec suscipit ullamcorper convallis.",
+		"imgThumbnail": "./thumbnail.png",
+		"imgBanner": "./banner.png",
+		"imgsExtra": ["./extra1.png", "./extra2.png", "./extra3.png", "./extra4.png"],
+		"genre": "horror",
+		"storyFrom": "Charles Perrault"
+	},
+	{
+		"id": "4",
+		"nameStudent": "Wout Van Impe",
+		"fairytale": "Blauwbaard",
+		"fairytaleLink": "link",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate ultrices aliquam. Vestibulum purus urna, porta eu facilisis a, dapibus auctor nibh. Suspendisse blandit quis enim non semper. Donec malesuada nibh eu erat placerat, vestibulum dictum dui semper. Nunc vel lacus et orci sagittis malesuada sit amet ut est. Praesent et interdum risus. Quisque consectetur eros vitae condimentum porttitor. Praesent odio arcu, ultrices ut consequat in, ullamcorper a arcu. Suspendisse sed consequat dolor. Sed ac orci vestibulum, posuere neque sit amet, hendrerit libero. Ut luctus id elit et euismod. Proin sed purus sit amet mauris tempus sollicitudin. Nunc rutrum viverra tortor, eu lacinia est cursus semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur odio ligula, efficitur id tincidunt at, vulputate et orci. Integer auctor vitae diam quis varius. Pellentesque ullamcorper fermentum pulvinar. Donec suscipit ullamcorper convallis.",
+		"imgThumbnail": "./thumbnail.png",
+		"imgBanner": "./banner.png",
+		"imgsExtra": ["./extra1.png", "./extra2.png", "./extra3.png", "./extra4.png"],
+		"genre": "horror",
+		"storyFrom": "Charles Perrault"
+	}
+]
