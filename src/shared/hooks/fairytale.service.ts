@@ -1,11 +1,12 @@
-import data from "./data.json"
+import data from "./data.json";
+import { FairytaleType } from "./fairytale.types";
 
 class FairytaleService {
-	getFairytales() {
+	getFairytales(): Promise<FairytaleType[]> {
 		return new Promise((resolve) => {
 			setTimeout(() => {
 				resolve(data);
-			}, 1000);
+			}, 2000);
 		});
 	}
 }
