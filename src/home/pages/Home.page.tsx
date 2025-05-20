@@ -21,7 +21,7 @@ export const Home = () => {
 			<h1>STORIES</h1>
 			<div className={styles["p-home__storyList"]}>
 				{fairytaleData?.map((fairytale: FairytaleType) => (
-					<SmallStoryCard key={fairytale.id} data={fairytale} />
+					<SmallStoryCard key={`smallCard${fairytale.id}`} data={fairytale} />
 				))}
 			</div>
 		</div>
