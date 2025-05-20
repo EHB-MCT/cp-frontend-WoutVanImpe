@@ -1,3 +1,4 @@
+// Navigation.tsx
 .navigation-bar {
 	display: flex;
 	flex-direction: row;
@@ -44,6 +45,7 @@
 	}
 }
 
+// Footer.tsx
 .footer {
 	display: flex;
 	justify-content: center;
@@ -63,6 +65,7 @@
 	}
 }
 
+// NavButton.tsx
 .navigatingButton {
 	button {
 		background-color: black;
@@ -78,6 +81,7 @@
 	}
 }
 
+// Carousel.tsx
 .carousel-slide {
 	background-color: #ebf5ec;
 	display: flex;
@@ -115,6 +119,7 @@
 	}
 }
 
+// LoadingSpinner.tsx
 .loader {
 	margin-top: 20px;
 	justify-self: center;
