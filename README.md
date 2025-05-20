@@ -14,4 +14,5 @@ Live link: [website.be](website.be) (optional)
 
 ## Sources 🗃️
 - https://chatgpt.com/share/681c7bed-40f0-800b-bc9d-262669d798a2
+- https://stackoverflow.com/questions/12991351/how-to-force-image-resize-and-keep-aspect-ratio for the image styling of the smallCards in home.module.scss
 - 

@@ -1,14 +1,13 @@
+import data from "./data.json";
 import { FairytaleType } from "./fairytale.types";
-import data from "./data.json"
 
-class TrashService {
-	getTrashItems(): Promise<FairytaleType[]> {
-		return new Promise<FairytaleType[]>((resolve) => {
+class FairytaleService {
+	getFairytales(): Promise<FairytaleType[]> {
+		return new Promise((resolve) => {
 			setTimeout(() => {
 				resolve(data);
-			}, 1000);
+			}, 2000);
 		});
 	}
 }
-
-export const trashService = new TrashService();
+export const fairytaleService = new FairytaleService();
