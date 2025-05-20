@@ -12,10 +12,10 @@ export const Carousel: FC<CarouselProps> = ({ data }) => {
 		<div>
 			{data ? (
 				data.map((fairytale: FairytaleType) => (
-					<div key={`carouselSlide${fairytale.id}`} className={styles["small-story-card"]}>
-						<img className={styles["small-story-card__img"]} src={fairytale.imgThumbnail} alt={`afbeelding van ${fairytale.fairytale}`} />
-						<div className={styles["small-story-card__text"]}>
-							<div className={styles["small-story-card__text__info"]}>
+					<div key={`carouselSlide${fairytale.id}`} className={styles["carousel-slide"]}>
+						<img className={styles["carousel-slide__img"]} src={fairytale.imgThumbnail} alt={`afbeelding van ${fairytale.fairytale}`} />
+						<div className={styles["carousel-slide__text"]}>
+							<div className={styles["carousel-slide__text__info"]}>
 								<h3>{fairytale.nameStudent}</h3>
 								<h4>{fairytale.fairytale}</h4>
 								<p>{fairytale.genre}</p>
