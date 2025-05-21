@@ -1,7 +1,7 @@
 import styles from "~shared/style.module.scss";
 import { NavLink, useLocation } from "react-router";
 import { HOME_ROUTE } from "~home/pages/home.route";
-import { MAKINGOF_ROUTE } from "~makingOf/pages/makingOf-basic.route";
+import { MAKINGOF_BASIC_ROUTE } from "~makingOf/pages/makingOf-basic.route";
 import { ABOUT_ROUTE } from "~aboutUs/pages/aboutUs.route";
 
 export const Navigation = () => {
@@ -16,7 +16,7 @@ export const Navigation = () => {
 				<NavLink to={HOME_ROUTE.path} className={({ isActive }) => (isActive ? styles.actif : "")}>
 					<p>SPROOKJES</p>
 				</NavLink>
-				<NavLink to={MAKINGOF_ROUTE.path} className={({ isActive }) => (isActive ? styles.actif : "")}>
+				<NavLink to={MAKINGOF_BASIC_ROUTE.path} className={({ isActive }) => (isActive ? styles.actif : "")}>
 					<p>MAKING OF</p>
 				</NavLink>
 				<NavLink to={ABOUT_ROUTE.path} className={({ isActive }) => (isActive ? styles.actif : "")}>
