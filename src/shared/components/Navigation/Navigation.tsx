@@ -1,7 +1,7 @@
 import styles from "~shared/style.module.scss";
 import { NavLink, useLocation } from "react-router";
 import { HOME_ROUTE } from "~home/pages/home.route";
-import { MAKINGOF_ROUTE } from "~makingOf/pages/makingOf.route";
+import { MAKINGOF_ROUTE } from "~makingOf/pages/makingOf-basic.route";
 import { ABOUT_ROUTE } from "~aboutUs/pages/aboutUs.route";
 
 export const Navigation = () => {
