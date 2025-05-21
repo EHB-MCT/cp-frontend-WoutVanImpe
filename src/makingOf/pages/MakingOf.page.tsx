@@ -1,4 +1,5 @@
 import styles from "./makingOf.module.scss";
+import { NavLink } from "react-router";
 
 export const MakingOf = () => {
 	return (
@@ -23,16 +24,20 @@ export const MakingOf = () => {
 					<p>Charles Perrault</p>
 					<p>Horror</p>
 				</div>
-				<div>
-					<img src="./extra1.png" alt="sprookje" />
+				<div className={styles["p-makingOf__info__img"]}>
+					<img className={styles["p-makingOf__squareImg"]} src="./extra1.png" alt="sprookje" />
+					<NavLink className={styles["p-makingOf__tailButton"]} to={"bob"}>
+						<img src="./eye.svg" alt="oog icoon" />
+						<p>Bekijk sprookje</p>
+					</NavLink>
 				</div>
 			</div>
 
 			<h1>EXTRA AFBEELDINGEN</h1>
-			<div>
-				<img src="./extra2.png" alt="sprookje" />
-				<img src="./extra3.png" alt="sprookje" />
-				<img src="./extra4.png" alt="sprookje" />
+			<div className={styles["p-makingOf__extraImages"]}>
+				<img className={styles["p-makingOf__squareImg"]} src="./extra2.png" alt="sprookje" />
+				<img className={styles["p-makingOf__squareImg"]} src="./extra3.png" alt="sprookje" />
+				<img className={styles["p-makingOf__squareImg"]} src="./extra4.png" alt="sprookje" />
 			</div>
 		</div>
 	);
