@@ -26,6 +26,7 @@
 			"~home/*": ["./src/home/*"],
 			"~makingOf/*": ["./src/makingOf/*"],
 			"~shared/*": ["./src/shared/*"],
+			"~context/*": ["./src/context/*"],
 			"~aboutUs/*": ["./src/aboutUs/*"]
 		}
 	},
