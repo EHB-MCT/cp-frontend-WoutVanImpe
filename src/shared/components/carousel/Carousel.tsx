@@ -1,6 +1,8 @@
 import styles from "~shared/style.module.scss";
 import { FairytaleType } from "~shared/hooks/fairytale.types";
 import { FC, useState } from "react";
+import { NavLink } from "react-router";
+import { MAKINGOF_BASIC_ROUTE } from "~makingOf/pages/makingOf-basic.route";
 
 type CarouselProps = {
 	data?: FairytaleType[];
@@ -26,7 +28,7 @@ export const Carousel: FC<CarouselProps> = ({ data }) => {
 	return (
 		<div className={styles["carousel"]}>
 			{currentSlides.map((fairytale) => (
-				<div key={`carouselSlide${fairytale.id}`} className={styles["carousel__slide"]}>
+				<NavLink to={`${MAKINGOF_BASIC_ROUTE.path}/${fairytale.id}`} key={`carouselSlide${fairytale.id}`} className={styles["carousel__slide"]}>
 					<img className={styles["carousel__slide__img"]} src={fairytale.imgThumbnail} alt={`afbeelding van ${fairytale.fairytale}`} />
 					<div className={styles["carousel__slide__text"]}>
 						<div className={styles["carousel__slide__text__info"]}>
@@ -36,7 +38,7 @@ export const Carousel: FC<CarouselProps> = ({ data }) => {
 						</div>
 						<img src="./back.svg" alt="ga naar icoon" />
 					</div>
-				</div>
+				</NavLink>
 			))}
 
 			<button className={styles["carousel__button__left"]} onClick={prevSlide}>
