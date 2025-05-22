@@ -27,19 +27,37 @@ export const Carousel: FC<CarouselProps> = ({ data }) => {
 
 	return (
 		<div className={styles["carousel"]}>
-			{currentSlides.map((fairytale) => (
-				<NavLink to={`${MAKINGOF_BASIC_ROUTE.path}/${fairytale.id}`} key={`carouselSlide${fairytale.id}`} className={styles["carousel__slide"]}>
-					<img className={styles["carousel__slide__img"]} src={fairytale.imgThumbnail} alt={`afbeelding van ${fairytale.fairytale}`} />
-					<div className={styles["carousel__slide__text"]}>
-						<div className={styles["carousel__slide__text__info"]}>
-							<h3>{fairytale.nameStudent}</h3>
-							<h4>{fairytale.fairytale}</h4>
-							<p>{fairytale.genre}</p>
+			{currentSlides.map((fairytale) => {
+				const thumbnail =
+					!fairytale.imgThumbnail || fairytale.imgThumbnail.trim() === ""
+						? "./no-thumbnail.png"
+						: fairytale.imgThumbnail;
+
+				return (
+					<NavLink
+						to={`${MAKINGOF_BASIC_ROUTE.path}/${fairytale.id}`}
+						key={`carouselSlide${fairytale.id}`}
+						className={styles["carousel__slide"]}
+					>
+						<img
+							className={styles["carousel__slide__img"]}
+							src={thumbnail}
+							alt={`afbeelding van ${fairytale.fairytale}`}
+							onError={(e) => {
+								(e.currentTarget as HTMLImageElement).src = "./no-thumbnail.png";
+							}}
+						/>
+						<div className={styles["carousel__slide__text"]}>
+							<div className={styles["carousel__slide__text__info"]}>
+								<h3>{fairytale.nameStudent}</h3>
+								<h4>{fairytale.fairytale}</h4>
+								<p>{fairytale.genre}</p>
+							</div>
+							<img src="./back.svg" alt="ga naar icoon" />
 						</div>
-						<img src="./back.svg" alt="ga naar icoon" />
-					</div>
-				</NavLink>
-			))}
+					</NavLink>
+				);
+			})}
 
 			<button className={styles["carousel__button__left"]} onClick={prevSlide}>
 				<img src="./carousel-arrow.svg" alt="vorige" />

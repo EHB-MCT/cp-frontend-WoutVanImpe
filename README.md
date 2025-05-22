@@ -21,3 +21,5 @@ Live link: [website.be](website.be) (optional)
 - https://chatgpt.com/c/682b359a-e1b0-8003-9c27-c03492243c00 for the deployment on github
 - https://stackoverflow.com/questions/9586278/javascript-variable-fallback for the fallback variables in MakingOf.page.tsx
 - https://chatgpt.com/share/682e286b-f388-8003-89e4-9dfad0b85748 for the ScrollToTop.tsx
+- https://stackoverflow.com/questions/72593985/in-react-how-can-i-replace-a-broken-image-with-a-default-image for the default image in MakingOf.page.tsx and SmallStoryCard.tsx
+- 

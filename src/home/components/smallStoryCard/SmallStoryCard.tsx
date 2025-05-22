@@ -12,9 +12,22 @@ type SmallCardProps = {
 export const SmallStoryCard: FC<SmallCardProps> = ({ data }) => {
 	const { resetFairytales } = useFairytales();
 
+	const fallbackImg = "./no-thumbnail.png";
+	const initialSrc = data.imgThumbnail && data.imgThumbnail !== "" ? data.imgThumbnail : fallbackImg;
+
 	return (
 		<NavLink to={`${MAKINGOF_BASIC_ROUTE.path}/${data.id}`} className={styles["small-story-card"]} onClick={resetFairytales}>
-			<img className={styles["small-story-card__img"]} src={data.imgThumbnail} alt={`afbeelding van ${data.fairytale}`} />
+			<img
+				className={styles["small-story-card__img"]}
+				src={initialSrc}
+				alt={`afbeelding van ${data.fairytale}`}
+				onError={(e) => {
+					const target = e.currentTarget;
+					if (target.src !== fallbackImg) {
+						target.src = fallbackImg;
+					}
+				}}
+			/>
 			<div className={styles["small-story-card__text"]}>
 				<div className={styles["small-story-card__text__info"]}>
 					<h3>{data.nameStudent}</h3>
@@ -26,3 +39,4 @@ export const SmallStoryCard: FC<SmallCardProps> = ({ data }) => {
 		</NavLink>
 	);
 };
+
