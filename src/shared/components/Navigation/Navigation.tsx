@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useNavigate, useLocation, NavLink } from "react-router";
 import styles from "~shared/style.module.scss";
 import { HOME_ROUTE } from "~home/pages/home.route";
@@ -9,9 +8,7 @@ import { useFairytales } from "~context/FairytaleContext";
 export const Navigation = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
-	const { filterFairytales, resetFairytales, searchMode, setSearchMode, activeGenres, toggleGenre, genres } = useFairytales();
-
-	const [searchTerm, setSearchTerm] = useState("");
+	const { resetFairytales, searchMode, setSearchMode, activeGenres, toggleGenre, genres, searchTerm, setSearchTerm } = useFairytales();
 
 	const toggleSearchMode = () => {
 		if (searchMode) {
@@ -27,13 +24,10 @@ export const Navigation = () => {
 
 	const handleToggleGenre = (genre: string) => {
 		toggleGenre(genre);
-		filterFairytales(searchTerm);
 	};
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const value = e.target.value;
-		setSearchTerm(value);
-		filterFairytales(value);
+		setSearchTerm(e.target.value);
 	};
 
 	return (
