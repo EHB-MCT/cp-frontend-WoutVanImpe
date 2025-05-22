@@ -16,8 +16,8 @@ export const MakingOf = () => {
 		fairytale?.description ??
 		"Blauwbaard is een duister sprookje vol mysterie en verboden geheimen. Het gaat over een rijk, maar zonderlinge edelman met een blauwe baard die al meerdere keren getrouwd is geweest, maar niemand weet wat er met zijn vorige vrouwen is gebeurd. Wanneer hij opnieuw trouwt, geeft hij zijn jonge bruid de sleutels van zijn kasteel, met één strikte regel: één kamertje mag ze nooit betreden. De verleiding blijkt te groot, en achter die verboden deur ontdekt ze een huiveringwekkend geheim… het lot van haar voorgangsters. Wanneer Blauwbaard haar daad ontdekt, dreigt ook zij zijn volgende slachtoffer te worden. Maar kan ze hem nog op tijd ontvluchten?";
 	const banner = fairytale?.imgBanner ?? "./banner.png";
-	const image = fairytale?.imgsExtra[0] ?? "./extra1.png";
-	const extraImgs = fairytale?.imgsExtra?.slice(1, 4) ?? ["./extra2.png", "./extra3.png", "./extra4.png"];
+	const image = fairytale?.imgThumbnail ?? "./extra1.png";
+	const extraImgs = fairytale?.imgsExtra ?? ["./extra2.png", "./extra3.png", "./extra4.png"];
 	const link = fairytale?.fairytaleLink ?? "#";
 
 	return (
