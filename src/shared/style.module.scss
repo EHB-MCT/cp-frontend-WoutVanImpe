@@ -9,6 +9,15 @@
 	padding: 20px 50px;
 	max-width: 1200px;
 
+	button {
+		background-color: transparent;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+
 	&__img {
 		width: 100px;
 	}
@@ -29,12 +38,39 @@
 			margin-left: 40px;
 		}
 
-		button {
-			background-color: transparent;
-			border: none;
+		&__filters {
 			display: flex;
-			justify-content: center;
-			align-items: center;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 8px;
+			margin-top: 25px;
+
+			&__search {
+				width: 300px;
+				padding: 10px 20px;
+				border-radius: 20px;
+				border: none;
+				background-color: #e1e1e1;
+			}
+
+			&__genres {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				button {
+					cursor: pointer;
+					background-color: #e1e1e1;
+					padding: 5px 8px;
+					border-radius: 10px;
+				}
+
+				button.active {
+					background-color: #e51131;
+					color: white;
+				}
+			}
 		}
 	}
 }
@@ -171,4 +207,10 @@
 	100% {
 		transform: rotate(1turn);
 	}
+}
+
+// Spacer.tsx
+.spacer {
+	width: 100%;
+	height: 80px;
 }
