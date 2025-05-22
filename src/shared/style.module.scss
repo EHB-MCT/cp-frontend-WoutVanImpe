@@ -9,6 +9,23 @@
 	padding: 20px 50px;
 	max-width: 1200px;
 
+	button {
+		background-color: transparent;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+
+	input {
+		width: 300px;
+		padding: 10px 20px;
+		border-radius: 20px;
+		border: none;
+		background-color: #e1e1e1;
+	}
+
 	&__img {
 		width: 100px;
 	}
@@ -27,14 +44,6 @@
 
 		> * {
 			margin-left: 40px;
-		}
-
-		button {
-			background-color: transparent;
-			border: none;
-			display: flex;
-			justify-content: center;
-			align-items: center;
 		}
 	}
 }
