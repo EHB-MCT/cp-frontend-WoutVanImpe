@@ -1,0 +1,15 @@
+.p-aboutUs {
+	&__header {
+		display: flex;
+		flex-direction: row;
+
+		&__text {
+			flex: 1;
+			padding-right: 15%;
+		}
+
+        img {
+            width: 40%;
+        }
+	}
+}

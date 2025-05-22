@@ -2,8 +2,11 @@ import styles from "./aboutUs.module.scss";
 import { HOME_ROUTE } from "~home/pages/home.route";
 import { Carousel } from "~shared/components/carousel/Carousel";
 import { ButtonNav } from "~shared/components/buttons-that-navigate/ButtonNav";
+import { useFairytales } from "~context/FairytaleContext";
 
 export const AboutUs = () => {
+	const { fairytales } = useFairytales();
+
 	return (
 		<div className={styles["p-aboutUs"]}>
 			<div className={styles["p-aboutUs__header"]}>
@@ -16,10 +19,16 @@ export const AboutUs = () => {
 					</p>
 					<ButtonNav navLink={HOME_ROUTE.path} text="Bekijk alle sprookjes" />
 				</div>
-				<img src="" alt="studenten" />
+				<img src="./about.png" alt="studenten" />
 			</div>
-			<h1>HOT TODAY</h1>
-			<Carousel />
+			{fairytales ? (
+				<>
+					<h1>HOT TODAY</h1>
+					<Carousel data={fairytales} />
+				</>
+			) : (
+				<></>
+			)}
 		</div>
 	);
 };
