@@ -4,6 +4,7 @@ import { FairytaleType } from "~shared/hooks/fairytale.types";
 import { LoadingSpinner } from "~shared/components/loadingSpinner/LoadingSpinner";
 import { Carousel } from "~shared/components/carousel/Carousel";
 import { useFairytales } from "~context/FairytaleContext";
+import { Spacer } from "~shared/components/spacer/Spacer";
 
 export const Home = () => {
 	const { filteredFairytales, searchMode } = useFairytales();
@@ -18,8 +19,8 @@ export const Home = () => {
 					<Carousel data={filteredFairytales} />
 				</>
 			)}
-
-			<h1 style={{ marginTop: 70 }}>STORIES</h1>
+			<Spacer />
+			<h1>STORIES</h1>
 			<div className={styles["p-home__storyList"]}>
 				{filteredFairytales.length > 0 ? filteredFairytales.map((fairytale: FairytaleType) => <SmallStoryCard key={`smallCard${fairytale.id}`} data={fairytale} />) : <p>Geen sprookjes gevonden voor jouw zoekopdracht.</p>}
 			</div>

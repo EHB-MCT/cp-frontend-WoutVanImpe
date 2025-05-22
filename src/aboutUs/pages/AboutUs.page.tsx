@@ -3,6 +3,7 @@ import { HOME_ROUTE } from "~home/pages/home.route";
 import { Carousel } from "~shared/components/carousel/Carousel";
 import { ButtonNav } from "~shared/components/buttons-that-navigate/ButtonNav";
 import { useFairytales } from "~context/FairytaleContext";
+import { Spacer } from "~shared/components/spacer/Spacer";
 
 export const AboutUs = () => {
 	const { fairytales } = useFairytales();
@@ -23,6 +24,7 @@ export const AboutUs = () => {
 			</div>
 			{fairytales ? (
 				<>
+					<Spacer />
 					<h1>HOT TODAY</h1>
 					<Carousel data={fairytales} />
 				</>
