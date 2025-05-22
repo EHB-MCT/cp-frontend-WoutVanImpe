@@ -20,7 +20,7 @@ export const Home = () => {
 		<div className={styles["p-home"]}>
 			<h1>HOT TODAY</h1>
 			<Carousel data={fairytaleData} />
-			<h1>STORIES</h1>
+			<h1 style={{ marginTop: 70 }}>STORIES</h1>
 			<div className={styles["p-home__storyList"]}>
 				{fairytaleData?.map((fairytale: FairytaleType) => (
 					<SmallStoryCard key={`smallCard${fairytale.id}`} data={fairytale} />

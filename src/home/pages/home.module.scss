@@ -1,11 +1,11 @@
-.p-home{
-    &__storyList{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 45px;
-    }
+.p-home {
+	&__storyList {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 45px;
+	}
 }
 
 .small-story-card {
@@ -17,6 +17,7 @@
 	border-radius: 20px;
 	text-decoration: none;
 	color: black;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.087);
 
 	&__img {
 		width: 95%;

@@ -9,12 +9,13 @@
 		background-position: top center;
 		background-size: cover;
 		position: relative;
+		box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.087);
 
 		&__text {
 			background-color: #ebf5ec;
 			position: absolute;
 			left: -5px;
-			bottom: -5px;
+			bottom: 0px;
 			padding: 10px 40px 10px 15px;
 
 			h2 {
@@ -64,6 +65,7 @@
 
 			img {
 				width: 100%;
+				box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.087);
 			}
 		}
 	}
@@ -82,6 +84,7 @@
 		}
 		img {
 			width: 20px;
+			box-shadow: none;
 		}
 	}
 
@@ -89,5 +92,8 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		> * {
+			box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.087);
+		}
 	}
 }
