@@ -9,7 +9,7 @@ import { useFairytales } from "~context/FairytaleContext";
 export const Navigation = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
-	const { filterFairytales, resetFairytales, searchMode, setSearchMode } = useFairytales();
+	const { filterFairytales, resetFairytales, searchMode, setSearchMode, activeGenres, toggleGenre, genres } = useFairytales();
 
 	const [searchTerm, setSearchTerm] = useState("");
 
@@ -23,6 +23,11 @@ export const Navigation = () => {
 			navigate(HOME_ROUTE.path);
 			resetFairytales();
 		}
+	};
+
+	const handleToggleGenre = (genre: string) => {
+		toggleGenre(genre);
+		filterFairytales(searchTerm);
 	};
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -47,7 +52,16 @@ export const Navigation = () => {
 			<nav className={styles["navigation-bar__nav"]}>
 				{searchMode ? (
 					<>
-						<input name="searchbar" type="text" placeholder="Zoek sprookje of student..." value={searchTerm} onChange={handleInputChange} className={styles["navigation-bar__search"]} />
+						<div className={styles["navigation-bar__nav__filters"]}>
+							<input name="searchbar" type="text" placeholder="Zoek sprookje of student..." value={searchTerm} onChange={handleInputChange} className={styles["navigation-bar__nav__filters__search"]} />
+							<div className={styles["navigation-bar__nav__filters__genres"]}>
+								{genres.map((genre) => (
+									<button key={genre} onClick={() => handleToggleGenre(genre)} className={activeGenres.includes(genre) ? styles.active : ""}>
+										{genre}
+									</button>
+								))}
+							</div>
+						</div>
 						<button onClick={toggleSearchMode}>
 							<img src="./search.svg" alt="zoekmodus sluiten" style={{ marginLeft: "1rem" }} />
 						</button>

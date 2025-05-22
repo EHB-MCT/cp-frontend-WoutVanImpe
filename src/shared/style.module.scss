@@ -18,14 +18,6 @@
 		cursor: pointer;
 	}
 
-	input {
-		width: 300px;
-		padding: 10px 20px;
-		border-radius: 20px;
-		border: none;
-		background-color: #e1e1e1;
-	}
-
 	&__img {
 		width: 100px;
 	}
@@ -44,6 +36,41 @@
 
 		> * {
 			margin-left: 40px;
+		}
+
+		&__filters {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 8px;
+			margin-top: 25px;
+
+			&__search {
+				width: 300px;
+				padding: 10px 20px;
+				border-radius: 20px;
+				border: none;
+				background-color: #e1e1e1;
+			}
+
+			&__genres {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+
+				button {
+					cursor: pointer;
+					background-color: #e1e1e1;
+					padding: 5px 8px;
+					border-radius: 10px;
+				}
+
+				button.active {
+					background-color: #e51131;
+					color: white;
+				}
+			}
 		}
 	}
 }
