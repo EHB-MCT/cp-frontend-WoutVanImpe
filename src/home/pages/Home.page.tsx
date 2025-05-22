@@ -17,9 +17,10 @@ export const Home = () => {
 				<>
 					<h1>HOT TODAY</h1>
 					<Carousel data={filteredFairytales} />
+					<Spacer />
 				</>
 			)}
-			<Spacer />
+
 			<h1>STORIES</h1>
 			<div className={styles["p-home__storyList"]}>
 				{filteredFairytales.length > 0 ? filteredFairytales.map((fairytale: FairytaleType) => <SmallStoryCard key={`smallCard${fairytale.id}`} data={fairytale} />) : <p>Geen sprookjes gevonden voor jouw zoekopdracht.</p>}
