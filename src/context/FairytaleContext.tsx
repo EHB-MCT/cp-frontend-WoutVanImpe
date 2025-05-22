@@ -35,40 +35,46 @@ export const FairytaleProvider = ({ children }: { children: React.ReactNode }) =
 	const [searchTerm, setSearchTerm] = useState("");
 	const [activeGenres, setActiveGenres] = useState<string[]>([]);
 
+	const shuffleArray = <T,>(array: T[]): T[] => {
+		return [...array].sort(() => Math.random() - 0.5);
+	};
+
+	const shuffledData = useMemo(() => (data ? shuffleArray(data) : null), [data]);
+
 	useEffect(() => {
-		if (!data) return;
+		if (!shuffledData) return;
 
 		const lower = searchTerm.toLowerCase();
 
-		const filtered = data.filter((f) => {
+		const filtered = shuffledData.filter((f) => {
 			const matchesSearch = f.fairytale.toLowerCase().includes(lower) || f.nameStudent.toLowerCase().includes(lower);
 			const matchesGenre = activeGenres.length === 0 || activeGenres.includes(f.genre);
 			return matchesSearch && matchesGenre;
 		});
 
 		setFilteredFairytales(filtered);
-	}, [searchTerm, activeGenres, data]);
+	}, [searchTerm, activeGenres, shuffledData]);
 
 	const toggleGenre = (genre: string) => {
 		setActiveGenres((prev) => (prev.includes(genre) ? prev.filter((g) => g !== genre) : [...prev, genre]));
 	};
 
 	const resetFairytales = () => {
-		setFilteredFairytales(data ?? []);
+		setFilteredFairytales(shuffledData ?? []);
 		setActiveGenres([]);
 		setSearchTerm("");
 	};
 
 	const genres = useMemo(() => {
-		if (!data) return [];
-		const allGenres = data.map((f) => f.genre).filter(Boolean);
+		if (!shuffledData) return [];
+		const allGenres = shuffledData.map((f) => f.genre).filter(Boolean);
 		return [...new Set(allGenres)];
-	}, [data]);
+	}, [shuffledData]);
 
 	const value = useMemo(
 		() => ({
-			fairytales: data ?? null,
-			filteredFairytales: filteredFairytales ?? data ?? null,
+			fairytales: shuffledData ?? null,
+			filteredFairytales: filteredFairytales ?? shuffledData ?? null,
 			resetFairytales,
 			searchMode,
 			setSearchMode,
@@ -78,7 +84,7 @@ export const FairytaleProvider = ({ children }: { children: React.ReactNode }) =
 			searchTerm,
 			setSearchTerm,
 		}),
-		[data, filteredFairytales, searchMode, activeGenres, genres, searchTerm]
+		[shuffledData, filteredFairytales, searchMode, activeGenres, genres, searchTerm]
 	);
 
 	return <FairytaleContext.Provider value={value}>{children}</FairytaleContext.Provider>;
