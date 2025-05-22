@@ -9,19 +9,16 @@ import { useFairytales } from "~context/FairytaleContext";
 export const Navigation = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
-	const { filterFairytales, resetFairytales } = useFairytales();
+	const { filterFairytales, resetFairytales, searchMode, setSearchMode } = useFairytales();
 
-	const [searchMode, setSearchMode] = useState(false);
 	const [searchTerm, setSearchTerm] = useState("");
 
 	const toggleSearchMode = () => {
 		if (searchMode) {
-			// sluit zoekbalk
 			setSearchMode(false);
 			setSearchTerm("");
 			resetFairytales();
 		} else {
-			// activeer zoekbalk
 			setSearchMode(true);
 			navigate(HOME_ROUTE.path);
 			resetFairytales();
@@ -50,13 +47,9 @@ export const Navigation = () => {
 			<nav className={styles["navigation-bar__nav"]}>
 				{searchMode ? (
 					<>
-						<input type="text" placeholder="Zoek sprookje of student..." value={searchTerm} onChange={handleInputChange} className={styles["navigation-bar__search"]} />
+						<input name="searchbar" type="text" placeholder="Zoek sprookje of student..." value={searchTerm} onChange={handleInputChange} className={styles["navigation-bar__search"]} />
 						<button onClick={toggleSearchMode}>
-							<img
-								src="./search.svg" // ← zorg dat dit een 'sluit' icoon is (bijv. kruisje)
-								alt="zoekmodus sluiten"
-								style={{ marginLeft: "1rem" }}
-							/>
+							<img src="./search.svg" alt="zoekmodus sluiten" style={{ marginLeft: "1rem" }} />
 						</button>
 					</>
 				) : (
