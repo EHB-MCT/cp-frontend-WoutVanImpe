@@ -18,6 +18,7 @@ export const MakingOf = () => {
 	const banner = fairytale?.imgBanner ?? "./banner.png";
 	const image = fairytale?.imgsExtra[0] ?? "./extra1.png";
 	const extraImgs = fairytale?.imgsExtra?.slice(1, 4) ?? ["./extra2.png", "./extra3.png", "./extra4.png"];
+	const link = fairytale?.fairytaleLink ?? "#";
 
 	return (
 		<div className={styles["p-makingOf"]}>
@@ -39,7 +40,7 @@ export const MakingOf = () => {
 				</div>
 				<div className={styles["p-makingOf__info__img"]}>
 					<img className={styles["p-makingOf__squareImg"]} src={image} alt="sprookje" />
-					<NavLink className={styles["p-makingOf__tailButton"]} to={"bob"}>
+					<NavLink className={styles["p-makingOf__tailButton"]} to={link}>
 						<img src="./eye.svg" alt="oog icoon" />
 						<p>Bekijk sprookje</p>
 					</NavLink>

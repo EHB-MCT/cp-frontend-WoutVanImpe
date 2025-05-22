@@ -2,6 +2,7 @@ export interface FairytaleType {
 	id: string;
 	nameStudent: string;
 	fairytale: string;
+	fairytaleLink: string;
 	description: string;
 	imgThumbnail: string;
 	imgBanner: string;
