@@ -56,8 +56,8 @@ export const Navigation = () => {
 								))}
 							</div>
 						</div>
-						<button onClick={toggleSearchMode}>
-							<img src="./search.svg" alt="zoekmodus sluiten" style={{ marginLeft: "1rem" }} />
+						<button onClick={toggleSearchMode} style={{marginLeft:10}}>
+							<img src="./search.svg" alt="zoekmodus sluiten" />
 						</button>
 					</>
 				) : (
