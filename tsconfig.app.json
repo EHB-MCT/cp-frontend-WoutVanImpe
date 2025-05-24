@@ -25,6 +25,7 @@
 			"~app/*": ["./src/app/*"],
 			"~home/*": ["./src/home/*"],
 			"~makingOf/*": ["./src/makingOf/*"],
+			"~parallax/*": ["./src/parallax/*"],
 			"~shared/*": ["./src/shared/*"],
 			"~context/*": ["./src/context/*"],
 			"~aboutUs/*": ["./src/aboutUs/*"]
