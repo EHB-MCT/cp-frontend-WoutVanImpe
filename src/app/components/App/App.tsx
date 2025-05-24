@@ -26,12 +26,8 @@ export const App = () => {
 	) : (
 		<FairytaleProvider>
 			<ScrollToTop />
-			<div className={styles["nav-wrapper"]}>
-				<SmallNavigation />
-			</div>
-			<div className={styles["content-wrapper"]}>
-				<Outlet />
-			</div>
+			<SmallNavigation />
+			<Outlet />
 		</FairytaleProvider>
 	);
 };
