@@ -6,7 +6,7 @@ import { ABOUT_ROUTE } from "~aboutUs/pages/aboutUs.route";
 import { useFairytales } from "~context/FairytaleContext";
 
 export const Navigation = () => {
-	const location = useLocation();
+	useLocation();
 	const navigate = useNavigate();
 	const { resetFairytales, searchMode, setSearchMode, activeGenres, toggleGenre, genres, searchTerm, setSearchTerm } = useFairytales();
 
@@ -56,7 +56,7 @@ export const Navigation = () => {
 								))}
 							</div>
 						</div>
-						<button onClick={toggleSearchMode} style={{marginLeft:10}}>
+						<button onClick={toggleSearchMode} style={{ marginLeft: 10 }}>
 							<img src="./search.svg" alt="zoekmodus sluiten" />
 						</button>
 					</>
@@ -77,6 +77,16 @@ export const Navigation = () => {
 					</>
 				)}
 			</nav>
+		</div>
+	);
+};
+
+export const SmallNavigation = () => {
+	return (
+		<div className={styles["navigation-button"]}>
+			<NavLink to={MAKINGOF_BASIC_ROUTE.path}>
+				<img src="./carousel-arrow.svg" alt="terug" />
+			</NavLink>
 		</div>
 	);
 };

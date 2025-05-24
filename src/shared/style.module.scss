@@ -81,6 +81,16 @@
 	}
 }
 
+.navigation-button {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+
+	img {
+		transform: rotate(180deg);
+	}
+}
+
 // Footer.tsx
 .footer {
 	display: flex;

@@ -3,6 +3,7 @@ import { HOME_ROUTE } from "~home/pages/home.route.tsx";
 import { MAKINGOF_BASIC_ROUTE } from "~makingOf/pages/makingOf-basic.route.tsx";
 import { MAKINGOF_DYNAMIC_ROUTE } from "~makingOf/pages/makingOf-dynamic.route.tsx";
 import { ABOUT_ROUTE } from "~aboutUs/pages/aboutUs.route.tsx";
+import { PARALLAX_ROUTE } from "~parallax/pages/parallax.route.tsx";
 import { createHashRouter, RouterProvider } from "react-router";
 import { App } from "../App/App.tsx";
 
@@ -18,6 +19,7 @@ export const Root = () => {
 				{ path: MAKINGOF_BASIC_ROUTE.path, element: MAKINGOF_BASIC_ROUTE.element },
 				{ path: MAKINGOF_DYNAMIC_ROUTE.path, element: MAKINGOF_DYNAMIC_ROUTE.element },
 				{ path: ABOUT_ROUTE.path, element: ABOUT_ROUTE.element },
+				{ path: PARALLAX_ROUTE.path, element: PARALLAX_ROUTE.element },
 				{
 					path: "*",
 					element: <h1>404: Page not found</h1>,

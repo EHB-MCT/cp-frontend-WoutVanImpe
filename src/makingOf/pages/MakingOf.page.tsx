@@ -3,6 +3,7 @@ import { NavLink, useParams } from "react-router";
 import { useFairytales } from "~context/FairytaleContext";
 import { useEffect, useState } from "react";
 import { LoadingSpinner } from "~shared/components/loadingSpinner/LoadingSpinner";
+import { PARALLAX_ROUTE } from "../../parallax/pages/parallax.route";
 
 const DEFAULT_FAIRYTALE = {
 	fairytale: "Blauwbaard",
@@ -14,7 +15,7 @@ const DEFAULT_FAIRYTALE = {
 	imgBanner: "./banner.png",
 	imgThumbnail: "./extra1.png",
 	imgsExtra: ["./extra2.png", "./extra3.png", "./extra4.png"],
-	fairytaleLink: "#",
+	fairytaleLink: PARALLAX_ROUTE.path,
 };
 
 const fallbackBanner = "./no-banner.png";
