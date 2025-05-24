@@ -24,8 +24,8 @@ const Scene01: React.FC = () => {
 	});
 
 	const skyY = useTransform(smoothScrollY, [0, 1], [0, -100]);
-	const mountainsY = useTransform(smoothScrollY, [0, 1], [150, -500]);
-	const castleY = useTransform(smoothScrollY, [0, 1], [150, -200]);
+	const mountainsY = useTransform(smoothScrollY, [0, 1], [150, -300]);
+	const castleY = useTransform(smoothScrollY, [0, 1], [150, -450]);
 	const treesY = useTransform(smoothScrollY, [0, 1], [550, -500]);
 	const containerY = useTransform(smoothScrollY, [0.5, 1], [0, -containerHeight]);
 
