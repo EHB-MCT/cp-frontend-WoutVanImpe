@@ -1,6 +1,5 @@
 .container {
 	position: relative;
-	overflow: hidden;
 
 	&--scene01 {
 		height: 140vh;
@@ -13,6 +12,9 @@
 	}
 	&--scene04 {
 		height: 400vh;
+	}
+	&--scene05 {
+		height: 300vh;
 	}
 }
 
@@ -64,6 +66,8 @@
 	background: rgba(255, 255, 255, 0.2);
 }
 
+// Scene 4
+
 .stickyScene {
 	position: sticky;
 	top: 0;
@@ -113,4 +117,23 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 4;
+}
+
+// Scene 5
+
+.walkingWoman {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20vw;
+	z-index: 2;
+}
+
+.stickyScene2 {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
 }
