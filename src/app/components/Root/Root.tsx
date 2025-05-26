@@ -15,7 +15,7 @@ export const Root = () => {
 			path: "/",
 			element: <App />,
 			children: [
-				{ path: HOME_ROUTE.path, element: HOME_ROUTE.element },
+				{ path: HOME_ROUTE.path, element: HOME_ROUTE.element, },
 				{ path: MAKINGOF_BASIC_ROUTE.path, element: MAKINGOF_BASIC_ROUTE.element },
 				{ path: MAKINGOF_DYNAMIC_ROUTE.path, element: MAKINGOF_DYNAMIC_ROUTE.element },
 				{ path: ABOUT_ROUTE.path, element: ABOUT_ROUTE.element },
@@ -29,7 +29,6 @@ export const Root = () => {
 	]);
 
 	return (
-		// Provide the client to your App
 		<QueryClientProvider client={queryClient}>
 			<RouterProvider router={router} />
 		</QueryClientProvider>
