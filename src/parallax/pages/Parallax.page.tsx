@@ -8,6 +8,7 @@ import Scene07 from "~parallax/scenes/Scene07";
 import Scene08 from "~parallax/scenes/Scene08";
 import Scene09 from "~parallax/scenes/Scene09";
 import Scene10 from "~parallax/scenes/Scene10";
+import Scene11 from "~parallax/scenes/Scene11";
 
 export const Parallax = () => {
 	return (
@@ -21,6 +22,8 @@ export const Parallax = () => {
 			<Scene07 />
 			<Scene08 />
 			<Scene09 />
+			<Scene10 />
+			<Scene11 />
 			<Scene10 />
 		</div>
 	);

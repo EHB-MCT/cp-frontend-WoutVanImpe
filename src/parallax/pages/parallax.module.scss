@@ -31,6 +31,9 @@
 	&--scene10 {
 		height: 200vh;
 	}
+	&--scene11 {
+		height: 300vh;
+	}
 }
 
 .scene {
@@ -219,4 +222,11 @@
 	transform: translateX(-50%);
 	width: 50vw;
 	pointer-events: none;
+}
+
+// Scene 11
+.knight {
+	position: absolute;
+	bottom: 0;
+	width: 15vw;
 }
