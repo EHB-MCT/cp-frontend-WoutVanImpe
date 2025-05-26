@@ -11,10 +11,11 @@ import Scene10 from "~parallax/scenes/Scene10";
 import Scene11 from "~parallax/scenes/Scene11";
 import Scene12 from "~parallax/scenes/Scene12";
 import Scene13 from "~parallax/scenes/Scene13";
+import styles from "../pages/parallax.module.scss";
 
 export const Parallax = () => {
 	return (
-		<div style={{ position: "relative" }}>
+		<div className={styles.storybookWrapper} style={{ position: "relative" }}>
 			<Scene01 />
 			<Scene02 />
 			<Scene03 />
@@ -31,5 +32,3 @@ export const Parallax = () => {
 		</div>
 	);
 };
-
-

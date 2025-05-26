@@ -20,11 +20,11 @@ const Scene06 = () => {
 		scrollYProgress.onChange((v) => console.log("Scene06 progress", v));
 	}, [scrollYProgress]);
 
-	const armX = useTransform(smoothScroll, [0.45, 0.6], ["-400%", "-220%"]);
+	const armX = useTransform(smoothScroll, [0.45, 0.6], ["-400%", "-200%"]);
 	const armY = useTransform(smoothScroll, [0.45, 0.56], [-500, -850]);
 	const armScale = useTransform(smoothScroll, [0], [0.5]);
 
-	const doorX = useTransform(smoothScroll, [0], ["-150%"]);
+	const doorX = useTransform(smoothScroll, [0], ["-100%"]);
 	const doorY = useTransform(smoothScroll, [0], [-250]);
 	const doorScale = useTransform(smoothScroll, [0], [0.5]);
 

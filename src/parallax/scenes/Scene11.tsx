@@ -23,8 +23,8 @@ const Scene11 = () => {
 	const doorRotation = useTransform(smoothScroll, [0.2, 0.5], [0, -90]);
 	const doorOpacity = useTransform(smoothScroll, [0.2, 0.5], [1, 0.9]);
 
-	const knight1X = useTransform(smoothScroll, [0, 0.5, 0.7], ["-150%", "-150%", "-780%"]);
-	const knight2X = useTransform(smoothScroll, [0, 0.5, 0.7], ["50%", "50%", "-300%"]);
+	const knight1X = useTransform(smoothScroll, [0, 0.5, 0.7], ["-150%", "-150%", "-550%"]);
+	const knight2X = useTransform(smoothScroll, [0, 0.5, 0.7], ["50%", "50%", "-200%"]);
 	const knightsOpacity = useTransform(smoothScroll, [0.4, 0.7], [0, 1]);
 	const knightsScale = useTransform(smoothScroll, [0, 0.5, 0.7], [0.4, 0.4, 1]);
 	const knightsY = useTransform(smoothScroll, [0.4, 0.7], [550, 850]);

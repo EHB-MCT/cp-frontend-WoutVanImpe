@@ -25,13 +25,13 @@ const Scene12 = () => {
 	const swordRotate = useTransform(smoothScroll, [0, 0.3, 0.5], [-30, -10, 20]);
 	const swordScale = useTransform(smoothScroll, [0], [0.6]);
 
-	const headX = useTransform(smoothScroll, [0.42, 0.8], ["-700%", "2080%"]);
+	const headX = useTransform(smoothScroll, [0.42, 0.8], ["-560%", "2080%"]);
 	const headY = useTransform(smoothScroll, [0.42, 0.8], [1000, -3200]);
 	const headRotate = useTransform(smoothScroll, [0.42, 0.8], [0, 180]);
 	const headOpacity = useTransform(smoothScroll, [0.5, 0.8], [1, 0]);
 	const headScale = useTransform(smoothScroll, [0], [0.6]);
 
-	const bodyX = useTransform(smoothScroll, [0], ["-300%"]);
+	const bodyX = useTransform(smoothScroll, [0], ["-235%"]);
 	const bodyY = useTransform(smoothScroll, [0], [600]);
 	const bodyScale = useTransform(smoothScroll, [0], [0.6]);
 

@@ -32,7 +32,7 @@ const Scene04: React.FC = () => {
 	const blauwbaardScale = useTransform(smoothScroll, [0, 0.79], [0.4, 0.005]);
 	const blauwbaardOpacity = useTransform(smoothScroll, [0.19, 0.24], [0, 1]);
 	const blauwbaardY = useTransform(smoothScroll, [0, 0.19, 0.24, 0.79], [783, 853, 783, 870]);
-	const blauwbaardX = useTransform(smoothScroll, [0, 0.79], ["-200%", "-58%"]);
+	const blauwbaardX = useTransform(smoothScroll, [0, 0.79], ["-150%", "-56%"]);
 
 	const castleScale = useTransform(smoothScroll, [0.5, 0.7], [4.2, 1]);
 	const castleY = useTransform(smoothScroll, [0.5, 0.7], [-1853, -300]);
