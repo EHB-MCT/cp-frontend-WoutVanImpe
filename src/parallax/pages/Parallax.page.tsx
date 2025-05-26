@@ -6,6 +6,7 @@ export const Parallax = () => {
 		<div style={{ position: "relative" }}>
 			<Scene01 />
 			<Scene02 />
+			<Scene02 />
 		</div>
 	);
 };

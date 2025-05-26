@@ -1,17 +1,10 @@
-import React, { useRef, useState, useLayoutEffect, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
 const Scene02: React.FC = () => {
 	const scrollRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({ target: scrollRef, offset: ["start end", "end start"] });
-	const [containerHeight, setContainerHeight] = useState(0);
-
-	useLayoutEffect(() => {
-		if (scrollRef.current) {
-			setContainerHeight(scrollRef.current.clientHeight);
-		}
-	}, []);
 
 	useEffect(() => {
 		scrollYProgress.onChange((v) => console.log("scrollYProgress", v));
@@ -23,21 +16,20 @@ const Scene02: React.FC = () => {
 		mass: 1,
 	});
 
-	const manOpacity = useTransform(smoothScrollY, [0, 0.1, 0.28, 0.33], [0, 1, 1, 0]);
-	const manY = useTransform(smoothScrollY, [0, 0.1, 0.28, 0.33], [50, -50, -50, -150]);
+	const manOpacity = useTransform(smoothScrollY, [0.06, 0.2, 0.4, 0.45], [0, 1, 1, 0]);
 
 	const text1Opacity = useTransform(smoothScrollY, [0.1, 0.15, 0.25, 0.3], [0, 1, 1, 0]);
 	const text1Y = useTransform(smoothScrollY, [0.1, 0.15, 0.25, 0.3], [300, 250, 250, 200]);
 
-	const womanOpacity = useTransform(smoothScrollY, [0.34, 0.4, 0.48, 0.53], [0, 1, 1, 0]);
-	const womanY = useTransform(smoothScrollY, [0.34, 0.4, 0.48, 0.53], [750, 600, 600, 550]);
+	const womanOpacity = useTransform(smoothScrollY, [0.36, 0.44, 0.65, 0.75], [0, 1, 1, 0]);
+	const womanY = useTransform(smoothScrollY, [0.34, 0.4, 0.48, 0.53], [750, 750, 750, 750]);
 
-	const text2Opacity = useTransform(smoothScrollY, [0.38, 0.43, 0.48, 0.53], [0, 1, 1, 0]);
-	const text2Y = useTransform(smoothScrollY, [0.38, 0.43, 0.48, 0.53], [1050, 1000, 1000, 950]);
+	const text2Opacity = useTransform(smoothScrollY, [0.5, 0.55, 0.6, 0.65], [0, 1, 1, 0]);
+	const text2Y = useTransform(smoothScrollY, [0.5, 0.55, 0.6, 0.65], [1050, 1000, 1000, 950]);
 
 	return (
-		<div ref={scrollRef} className={styles.container}>
-			<motion.div style={{ y: manY, opacity: manOpacity }} className={styles.layer}>
+		<div ref={scrollRef} className={`${styles.container} ${styles["container--scene02"]}`}>
+			<motion.div style={{ opacity: manOpacity }} className={styles.layer}>
 				<img src="./scenes/scene02/blauwbaard.png" alt="blauwbaard" className={styles.image} />
 			</motion.div>
 

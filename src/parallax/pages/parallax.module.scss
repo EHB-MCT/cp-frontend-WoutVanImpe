@@ -1,7 +1,13 @@
 .container {
 	position: relative;
-	height: 290vh;
 	overflow: hidden;
+
+	&--scene01 {
+		height: 140vh;
+	}
+	&--scene02 {
+		height: 210vh;
+	}
 }
 
 .scene {
