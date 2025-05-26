@@ -1,14 +1,18 @@
 import styles from "./app.module.scss";
-import { Navigation } from "~shared/components/Navigation/Navigation";
-import { Outlet } from "react-router";
+import { Navigation, SmallNavigation } from "~shared/components/Navigation/Navigation";
+import { Outlet, useLocation } from "react-router";
 import { Footer } from "~shared/components/Footer/Footer";
 import { FairytaleProvider } from "~context/FairytaleContext";
 import ScrollToTop from "~shared/components/scroll-to-top/ScrollToTop";
+import { PARALLAX_ROUTE } from "~parallax/pages/parallax.route";
 
 export const App = () => {
-	return (
+	const location = useLocation();
+	const isParallaxRoute = location.pathname === PARALLAX_ROUTE.path;
+
+	return !isParallaxRoute ? (
 		<FairytaleProvider>
-			<ScrollToTop/>
+			<ScrollToTop />
 			<div className={styles["nav-wrapper"]}>
 				<Navigation />
 			</div>
@@ -18,6 +22,12 @@ export const App = () => {
 			<div className={styles["footer-wrapper"]}>
 				<Footer />
 			</div>
+		</FairytaleProvider>
+	) : (
+		<FairytaleProvider>
+			<ScrollToTop />
+			<SmallNavigation />
+			<Outlet />
 		</FairytaleProvider>
 	);
 };

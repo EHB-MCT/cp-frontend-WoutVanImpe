@@ -1,0 +1,289 @@
+@import url("https://use.typekit.net/rxb8xyv.css");
+
+.container {
+	position: relative;
+
+	&--scene01 {
+		height: 140vh;
+	}
+	&--scene02 {
+		height: 210vh;
+	}
+	&--scene03 {
+		height: 200vh;
+		overflow-x: hidden;
+	}
+	&--scene04 {
+		height: 400vh;
+	}
+	&--scene05 {
+		height: 300vh;
+	}
+	&--scene06 {
+		height: 300vh;
+	}
+	&--scene07 {
+		height: 300vh;
+	}
+	&--scene08 {
+		height: 250vh;
+	}
+	&--scene09 {
+		height: 300vh;
+	}
+	&--scene10 {
+		height: 200vh;
+	}
+	&--scene11 {
+		height: 300vh;
+	}
+	&--scene12 {
+		height: 200vh;
+	}
+	&--scene13 {
+		height: 140vh;
+	}
+
+	h1 {
+		font-family: "bradley-djr", sans-serif;
+		font-weight: 600;
+		font-style: normal;
+	}
+
+	p {
+		font-family: "garamond-premier-pro", serif;
+		font-weight: 400;
+		font-style: normal;
+	}
+}
+
+.storybookWrapper {
+	width: 1048px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.scene {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+.image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.textLeft {
+	position: absolute;
+	right: 0px;
+	width: 50%;
+	text-align: left;
+	padding: 2rem;
+}
+
+.textRight {
+	position: absolute;
+	left: 0;
+	width: 50%;
+	text-align: right;
+	padding: 2rem;
+}
+
+.textRight,
+.textLeft {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+// Scene 4
+
+.stickyScene {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.bgLayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 1;
+}
+
+.blauwbaard {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 30vw;
+	z-index: 2;
+}
+
+.door {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 3;
+}
+
+.doorLeaf {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 4;
+}
+
+// Scene 5
+
+.walkingWoman {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20vw;
+	z-index: 2;
+}
+
+.stickyScene2 {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+// Scene 6
+.arm {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 25vw;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.doorRight {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30vw;
+	height: 100%;
+	z-index: 3;
+}
+
+// Scene 7
+
+.wallLayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.woman {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 15vw;
+	z-index: 5;
+}
+
+// Scene 8
+.bodyLayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+// Scene 9
+.shadow {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	width: 100%;
+	pointer-events: none;
+}
+
+// Scene 10
+.blauwbaardCloseup {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50vw;
+	pointer-events: none;
+}
+
+// Scene 11
+.knight {
+	position: absolute;
+	bottom: 0;
+	width: 15vw;
+}
+
+// Scene 12
+.torso {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 25vw;
+}
+
+.head {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10vw;
+}
+
+.sword {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	width: 20vw;
+}
+
+.fadeOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	pointer-events: none;
+}

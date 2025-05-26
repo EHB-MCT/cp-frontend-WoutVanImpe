@@ -3,6 +3,8 @@ import { NavLink, useParams } from "react-router";
 import { useFairytales } from "~context/FairytaleContext";
 import { useEffect, useState } from "react";
 import { LoadingSpinner } from "~shared/components/loadingSpinner/LoadingSpinner";
+import { PARALLAX_ROUTE } from "../../parallax/pages/parallax.route";
+import { Spacer } from "~shared/components/spacer/Spacer";
 
 const DEFAULT_FAIRYTALE = {
 	fairytale: "Blauwbaard",
@@ -14,7 +16,7 @@ const DEFAULT_FAIRYTALE = {
 	imgBanner: "./banner.png",
 	imgThumbnail: "./extra1.png",
 	imgsExtra: ["./extra2.png", "./extra3.png", "./extra4.png"],
-	fairytaleLink: "#",
+	fairytaleLink: PARALLAX_ROUTE.path,
 };
 
 const fallbackBanner = "./no-banner.png";
@@ -49,7 +51,12 @@ export const MakingOf = () => {
 	}, [banner]);
 
 	useEffect(() => {
-		if (!extraImgs.length) return;
+		if (!extraImgs?.length) {
+			setValidExtraImgs([]);
+			return;
+		}
+
+		let isMounted = true;
 
 		const validateImages = async () => {
 			const checks = await Promise.all(
@@ -64,11 +71,17 @@ export const MakingOf = () => {
 				)
 			);
 
-			const valid = checks.filter((src): src is string => src !== null);
-			setValidExtraImgs(valid.slice(0, 3)); // Beperk tot 3 geldige afbeeldingen
+			if (isMounted) {
+				const valid = checks.filter((src): src is string => src !== null);
+				setValidExtraImgs(valid.slice(0, 3));
+			}
 		};
 
 		validateImages();
+
+		return () => {
+			isMounted = false;
+		};
 	}, [extraImgs]);
 
 	return id && !fairytales ? (
@@ -116,6 +129,7 @@ export const MakingOf = () => {
 
 			{validExtraImgs.length > 0 && (
 				<>
+					<Spacer />
 					<h1>EXTRA BEELDEN</h1>
 					<div className={styles["p-makingOf__extraImages"]}>
 						{validExtraImgs.map((img) => (

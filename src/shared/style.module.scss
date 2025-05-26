@@ -81,6 +81,20 @@
 	}
 }
 
+.navigation-button {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 99;
+
+	img {
+		transform: rotate(180deg);
+		background-color: white;
+		padding: 3px;
+		border-radius: 20px;
+	}
+}
+
 // Footer.tsx
 .footer {
 	display: flex;

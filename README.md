@@ -22,4 +22,4 @@ Live link: [website.be](website.be) (optional)
 - https://stackoverflow.com/questions/9586278/javascript-variable-fallback for the fallback variables in MakingOf.page.tsx
 - https://chatgpt.com/share/682e286b-f388-8003-89e4-9dfad0b85748 for the ScrollToTop.tsx
 - https://stackoverflow.com/questions/72593985/in-react-how-can-i-replace-a-broken-image-with-a-default-image for the default image in MakingOf.page.tsx and SmallStoryCard.tsx
-- 
+- https://chatgpt.com/share/6831e831-5b7c-8001-ae4c-c8f4cafe85ce for the parallax in scene01
