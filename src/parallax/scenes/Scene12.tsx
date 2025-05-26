@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef} from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
@@ -16,9 +16,6 @@ const Scene12 = () => {
 		mass: 1,
 	});
 
-	useEffect(() => {
-		scrollYProgress.onChange((v) => console.log("Scene012 progress", v));
-	}, [scrollYProgress]);
 
 	const swordX = useTransform(smoothScroll, [0.3, 0.6], ["-300%", "200%"]);
 	const swordY = useTransform(smoothScroll, [0, 0.2, 0.32], [0, 0, -700]);

@@ -6,7 +6,6 @@ const Scene13: React.FC = () => {
 	const scrollRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({ target: scrollRef, offset: ["start end", "end start"] });
 
-	// limiteren op 0.5 max (je kunt aanpassen)
 	const clampedProgress = useTransform(scrollYProgress, (v) => Math.min(v, 0.5));
 
 	const smoothScrollY = useSpring(clampedProgress, {
@@ -20,15 +19,11 @@ const Scene13: React.FC = () => {
 	const treesY = useTransform(smoothScrollY, [0, 0.5], [700, 200]);
 
 	const endOpacity = useTransform(smoothScrollY, [0.1, 0.5], [0, 1]);
-	const endX = useTransform(smoothScrollY, [0], ["37%"]);
-	const endY = useTransform(smoothScrollY, [0], [240]);
+	const endX = useTransform(smoothScrollY, [0], ["33%"]);
+	const endY = useTransform(smoothScrollY, [0], [200]);
 
 	return (
-		<div
-			ref={scrollRef}
-			className={`${styles.container} ${styles["container--scene13"]}`}
-			style={{ height: "300vh", position: "relative" }} // zorgt scrollruimte voor sticky
-		>
+		<div ref={scrollRef} className={`${styles.container} ${styles["container--scene13"]}`} style={{ height: "300vh", position: "relative" }}>
 			<motion.div style={{ position: "sticky", top: 0, height: "100vh", overflow: "hidden" }}>
 				<motion.div style={{ y: skyY }} className={styles.layer}>
 					<img src="./scenes/scene13/sky.png" alt="Sky" className={styles.image} />

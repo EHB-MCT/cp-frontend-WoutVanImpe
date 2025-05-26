@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef} from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
@@ -16,10 +16,6 @@ const Scene09 = () => {
 		mass: 1,
 	});
 
-	useEffect(() => {
-		scrollYProgress.onChange((v) => console.log("Scene09 progress", v));
-	}, [scrollYProgress]);
-
 	const doorRotation = useTransform(smoothScroll, [0], [-90]);
 	const doorOpacity = useTransform(smoothScroll, [0], [0.8]);
 	const doorX = useTransform(smoothScroll, [0], ["15%"]);
@@ -35,7 +31,7 @@ const Scene09 = () => {
 	const womanScale = useTransform(smoothScroll, [0], [0.5]);
 
 	const shadowOpacity = useTransform(smoothScroll, [0.4, 0.74], [0, 0.8]);
-	const shadowX = useTransform(smoothScroll, [0], ["-82%"]);
+	const shadowX = useTransform(smoothScroll, [0], ["-87%"]);
 	const shadowY = useTransform(smoothScroll, [0.4, 0.74], [2000, 1500]);
 	const shadowScale = useTransform(smoothScroll, [0.4, 0.74], [0.8, 1]);
 

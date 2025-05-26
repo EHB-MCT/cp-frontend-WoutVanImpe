@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
@@ -15,10 +15,6 @@ const Scene04: React.FC = () => {
 		damping: 20,
 		mass: 1,
 	});
-
-	useEffect(() => {
-		scrollYProgress.onChange((v) => console.log("Scene04 progress", v));
-	}, [scrollYProgress]);
 
 	const skyOpacity = useTransform(smoothScroll, [0.05, 0.1], [0, 1]);
 	const skyY = useTransform(smoothScroll, [0.05, 0.1], [50, 0]);
@@ -64,16 +60,7 @@ const Scene04: React.FC = () => {
 					<img src="./scenes/scene04/castle.png" alt="Castle Kasteel" />
 				</motion.div>
 
-				<motion.div
-					style={{
-						rotateY: doorRotation,
-						opacity: doorOpacity,
-						y: doorY,
-						transformOrigin: "left center",
-						zIndex: 3,
-					}}
-					className={styles.doorLeaf}
-				>
+				<motion.div style={{ rotateY: doorRotation, opacity: doorOpacity, y: doorY, transformOrigin: "left center", zIndex: 3 }} className={styles.doorLeaf}>
 					<img src="./scenes/scene04/door.png" alt="Deur" />
 				</motion.div>
 			</div>

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef} from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
@@ -8,10 +8,6 @@ const Scene03: React.FC = () => {
 		target: scrollRef,
 		offset: ["start end", "end start"],
 	});
-
-	useEffect(() => {
-		scrollYProgress.onChange((v) => console.log("Scene03 progress", v));
-	}, [scrollYProgress]);
 
 	const smoothScrollY = useSpring(scrollYProgress, {
 		stiffness: 50,

@@ -40,18 +40,7 @@ const Scene07 = () => {
 				<motion.div className={styles.wallLayer} style={{ zIndex: 3, x: wallX, y: wallY, scale: wallScale }}>
 					<img src="./scenes/scene07/wall.png" alt="Muur met opening" className={styles.image} />
 				</motion.div>
-				<motion.div
-					className={styles.doorLeaf}
-					style={{
-						rotateY: doorRotation,
-						transformOrigin: "left center",
-						opacity: doorOpacity,
-						x: doorX,
-						y: doorY,
-						scale: doorScale,
-						zIndex: 2,
-					}}
-				>
+				<motion.div className={styles.doorLeaf} style={{ rotateY: doorRotation, transformOrigin: "left center", opacity: doorOpacity, x: doorX, y: doorY, scale: doorScale, zIndex: 2 }}>
 					<img src="./scenes/scene07/door.png" alt="Deur" />
 				</motion.div>
 

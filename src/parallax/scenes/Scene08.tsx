@@ -15,7 +15,7 @@ const Scene08 = () => {
 		mass: 1,
 	});
 
-	const bodyY = useTransform(smoothScroll, [0.05, 1], [50, 10]); // zacht omhoog
+	const bodyY = useTransform(smoothScroll, [0.05, 1], [50, 10]);
 	const opacity = useTransform(smoothScroll, [0.05, 0.3], [0, 1]);
 	const blur = useTransform(smoothScroll, [0, 0.2], [8, 0]);
 	const zoom = useTransform(smoothScroll, [0.3, 1], [1, 1.04]);

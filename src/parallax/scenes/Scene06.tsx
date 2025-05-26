@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
@@ -15,10 +15,6 @@ const Scene06 = () => {
 		damping: 20,
 		mass: 1,
 	});
-
-	useEffect(() => {
-		scrollYProgress.onChange((v) => console.log("Scene06 progress", v));
-	}, [scrollYProgress]);
 
 	const armX = useTransform(smoothScroll, [0.45, 0.6], ["-400%", "-200%"]);
 	const armY = useTransform(smoothScroll, [0.45, 0.56], [-500, -850]);
@@ -39,14 +35,7 @@ const Scene06 = () => {
 					<img src="./scenes/scene06/door.png" alt="Deur" />
 				</motion.div>
 
-				<motion.div
-					className={styles.arm}
-					style={{
-						x: armX,
-						y: armY,
-						scale: armScale,
-					}}
-				>
+				<motion.div className={styles.arm} style={{ x: armX, y: armY, scale: armScale }}>
 					<img src="./scenes/scene06/arm.png" alt="Arm met sleutel" />
 				</motion.div>
 			</div>

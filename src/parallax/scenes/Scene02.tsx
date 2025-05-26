@@ -1,14 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
 const Scene02: React.FC = () => {
 	const scrollRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({ target: scrollRef, offset: ["start end", "end start"] });
-
-	useEffect(() => {
-		scrollYProgress.onChange((v) => console.log("scrollYProgress", v));
-	}, [scrollYProgress]);
 
 	const smoothScrollY = useSpring(scrollYProgress, {
 		stiffness: 50,
@@ -18,14 +14,16 @@ const Scene02: React.FC = () => {
 
 	const manOpacity = useTransform(smoothScrollY, [0.06, 0.2, 0.4, 0.45], [0, 1, 1, 0]);
 
-	const text1Opacity = useTransform(smoothScrollY, [0.1, 0.15, 0.25, 0.3], [0, 1, 1, 0]);
-	const text1Y = useTransform(smoothScrollY, [0.1, 0.15, 0.25, 0.3], [300, 250, 250, 200]);
+	const text1Opacity = useTransform(smoothScrollY, [0.1, 0.15, 0.38, 0.42], [0, 1, 1, 0]);
+	const text1X = useTransform(smoothScrollY, [0], ["70%"]);
+	const text1Y = useTransform(smoothScrollY, [0.1, 0.15, 0.38, 0.42], [300, 250, 250, 200]);
 
 	const womanOpacity = useTransform(smoothScrollY, [0.36, 0.44, 0.65, 0.75], [0, 1, 1, 0]);
 	const womanY = useTransform(smoothScrollY, [0.34, 0.4, 0.48, 0.53], [750, 750, 750, 750]);
 
-	const text2Opacity = useTransform(smoothScrollY, [0.5, 0.55, 0.6, 0.65], [0, 1, 1, 0]);
-	const text2Y = useTransform(smoothScrollY, [0.5, 0.55, 0.6, 0.65], [1050, 1000, 1000, 950]);
+	const text2Opacity = useTransform(smoothScrollY, [0.5, 0.55, 0.62, 0.67], [0, 1, 1, 0]);
+	const text2X = useTransform(smoothScrollY, [0], ["10%"]);
+	const text2Y = useTransform(smoothScrollY, [0.5, 0.55, 0.62, 0.67], [1050, 1000, 1000, 950]);
 
 	return (
 		<div ref={scrollRef} className={`${styles.container} ${styles["container--scene02"]}`}>
@@ -33,7 +31,7 @@ const Scene02: React.FC = () => {
 				<img src="./scenes/scene02/blauwbaard.png" alt="blauwbaard" className={styles.image} />
 			</motion.div>
 
-			<motion.div style={{ y: text1Y, opacity: text1Opacity }} className={`${styles.layer} ${styles.textRight}`}>
+			<motion.div style={{ x: text1X, y: text1Y, opacity: text1Opacity }} className={`${styles.layer} ${styles.textRight}`}>
 				<p>Blauwbaard komt dichterbij...</p>
 			</motion.div>
 
@@ -41,7 +39,7 @@ const Scene02: React.FC = () => {
 				<img src="./scenes/scene02/woman.png" alt="Woman" className={styles.image} />
 			</motion.div>
 
-			<motion.div style={{ y: text2Y, opacity: text2Opacity }} className={`${styles.layer} ${styles.textLeft}`}>
+			<motion.div style={{ x: text2X, y: text2Y, opacity: text2Opacity }} className={`${styles.layer} ${styles.textLeft}`}>
 				<p>De vrouw verschijnt...</p>
 			</motion.div>
 		</div>
