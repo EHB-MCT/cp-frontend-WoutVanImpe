@@ -19,16 +19,14 @@ const Scene03: React.FC = () => {
 		mass: 1,
 	});
 
-	// Hand van links (komt binnen van links)
 	const handLeftX = useTransform(smoothScrollY, [0, 0.3], ["-100%", "0%"]);
 	const handLeftOpacity = useTransform(smoothScrollY, [0, 0.3], [0, 1]);
 
-	// Sleutel valt naar beneden vanaf midden
-	const keyX = useTransform(smoothScrollY, [0, 0.3], ["-100%", "5%"]);
+	const keyX = useTransform(smoothScrollY, [0, 0.3, 0.6], ["-100%", "7%", "15%"]);
 	const keyY = useTransform(smoothScrollY, [0.3, 0.6], [130, 630]);
+	const keyRotate = useTransform(smoothScrollY, [0.29, 0.34], [0, -10]);
 	const keyOpacity = useTransform(smoothScrollY, [0.2, 0.59, 0.62], [1, 1, 0]);
 
-	// Hand van rechts komt op einde in beeld
 	const handRightX = useTransform(smoothScrollY, [0.1, 0.45], ["100%", "0%"]);
 	const handRightY = useTransform(smoothScrollY, [0], [530]);
 	const handRightOpacity = useTransform(smoothScrollY, [0.35, 0.5], [0, 1]);
@@ -39,7 +37,7 @@ const Scene03: React.FC = () => {
 				<img src="./scenes/scene03/left-hand.png" alt="Hand met sleutel" className={styles.image} />
 			</motion.div>
 
-			<motion.div style={{ x: keyX, y: keyY, opacity: keyOpacity }} className={styles.layer}>
+			<motion.div style={{ x: keyX, y: keyY, rotate: keyRotate, opacity: keyOpacity }} className={styles.layer}>
 				<img src="./scenes/scene03/key.png" alt="Sleutel" className={styles.image} />
 			</motion.div>
 
