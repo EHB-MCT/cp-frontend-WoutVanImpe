@@ -34,6 +34,9 @@
 	&--scene11 {
 		height: 300vh;
 	}
+	&--scene12 {
+		height: 200vh;
+	}
 }
 
 .scene {
@@ -229,4 +232,38 @@
 	position: absolute;
 	bottom: 0;
 	width: 15vw;
+}
+
+// Scene 12
+.torso {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 25vw;
+}
+
+.head {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 10vw;
+}
+
+.sword {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	width: 20vw;
+}
+
+.fadeOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	pointer-events: none;
 }
