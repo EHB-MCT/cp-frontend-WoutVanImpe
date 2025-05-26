@@ -4,6 +4,8 @@ export interface FairytaleType {
 	fairytale: string;
 	fairytaleLink: string;
 	description: string;
+	parallaxInfo: string;
+	imgsInfo: string;
 	imgThumbnail: string;
 	imgBanner: string;
 	imgsExtra: string[];

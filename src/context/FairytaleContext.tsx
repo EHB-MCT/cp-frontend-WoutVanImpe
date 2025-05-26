@@ -30,6 +30,7 @@ const FairytaleContext = createContext<FairytaleContextType>({
 
 export const FairytaleProvider = ({ children }: { children: React.ReactNode }) => {
 	const { data } = useGetFairytales();
+	console.log(data);
 	const [filteredFairytales, setFilteredFairytales] = useState<FairytaleType[] | null>(null);
 	const [searchMode, setSearchMode] = useState(false);
 	const [searchTerm, setSearchTerm] = useState("");
