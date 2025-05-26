@@ -1,6 +1,6 @@
 import { Parallax } from "./Parallax.page";
 
 export const PARALLAX_ROUTE = {
-	path: "/parallax",
+	path: "/fairytale",
 	element: <Parallax />,
 };
