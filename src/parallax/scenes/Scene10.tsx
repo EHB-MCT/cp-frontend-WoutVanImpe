@@ -16,16 +16,17 @@ const Scene10 = () => {
 		mass: 1,
 	});
 
-	// Blauwbaard komt naar voren
 	const scale = useTransform(smoothScroll, [0.2, 0.8], [0.6, 1]);
 	const x = useTransform(smoothScroll, [0.2, 0.8], ["-170%", "-250%"]);
 	const y = useTransform(smoothScroll, [0.2, 0.8], [700, 700]);
 	const opacity = useTransform(smoothScroll, [0.1, 0.3], [0, 1]);
 
+	const bgScale = useTransform(smoothScroll, [0.2, 0.8], [1, 1.6]);
+
 	return (
 		<div ref={ref} className={`${styles.container} ${styles["container--scene10"]}`}>
 			<div className={styles.stickyScene}>
-				<motion.div className={styles.bgLayer} style={{ zIndex: 1 }}>
+				<motion.div className={styles.bgLayer} style={{ zIndex: 1 , scale: bgScale}}>
 					<img src="./scenes/scene10/bg.png" alt="Donkere achtergrond" className={styles.image} />
 				</motion.div>
 
