@@ -34,9 +34,8 @@ const Scene04: React.FC = () => {
 	const blauwbaardY = useTransform(smoothScroll, [0, 0.19, 0.24, 0.79], [783, 853, 783, 880]);
 	const blauwbaardX = useTransform(smoothScroll, [0, 0.79], ["-200%", "-53%"]);
 
-	const castleScale = useTransform(smoothScroll, [0.5, 0.7], [4, 1]);
-	const castleY = useTransform(smoothScroll, [0.5, 0.7], [-1733, -300]);
-	const castleOpacity = useTransform(smoothScroll, [0.25, 0.3], [0, 1]);
+	const castleScale = useTransform(smoothScroll, [0.5, 0.7], [4.2, 1]);
+	const castleY = useTransform(smoothScroll, [0.5, 0.7], [-1853, -300]);
 
 	const doorRotation = useTransform(smoothScroll, [0.65, 0.8], [100, 0]);
 	const doorOpacity = useTransform(smoothScroll, [0.66, 0.67], [0, 1]);
@@ -61,7 +60,7 @@ const Scene04: React.FC = () => {
 					<img src="./scenes/scene04/man.png" alt="Blauwbaard te paard" />
 				</motion.div>
 
-				<motion.div style={{ scale: castleScale, y: castleY, opacity: castleOpacity, zIndex: 4 }} className={styles.door}>
+				<motion.div style={{ scale: castleScale, y: castleY, zIndex: 4 }} className={styles.door}>
 					<img src="./scenes/scene04/castle.png" alt="Castle Kasteel" />
 				</motion.div>
 
