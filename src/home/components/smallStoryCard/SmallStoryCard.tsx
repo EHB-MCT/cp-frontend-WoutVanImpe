@@ -10,13 +10,20 @@ type SmallCardProps = {
 };
 
 export const SmallStoryCard: FC<SmallCardProps> = ({ data }) => {
-	const { resetFairytales } = useFairytales();
+	const { resetFairytales, setSearchMode } = useFairytales();
 
 	const fallbackImg = "./no-thumbnail.png";
 	const initialSrc = data.imgThumbnail && data.imgThumbnail !== "" ? data.imgThumbnail : fallbackImg;
 
 	return (
-		<NavLink to={`${MAKINGOF_BASIC_ROUTE.path}/${data.id}`} className={styles["small-story-card"]} onClick={resetFairytales}>
+		<NavLink
+			to={`${MAKINGOF_BASIC_ROUTE.path}/${data.id}`}
+			className={styles["small-story-card"]}
+			onClick={() => {
+				resetFairytales();
+				setSearchMode(false);
+			}}
+		>
 			<img
 				className={styles["small-story-card__img"]}
 				src={initialSrc}
@@ -39,4 +46,3 @@ export const SmallStoryCard: FC<SmallCardProps> = ({ data }) => {
 		</NavLink>
 	);
 };
-
