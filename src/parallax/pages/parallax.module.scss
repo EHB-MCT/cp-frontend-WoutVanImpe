@@ -16,6 +16,9 @@
 	&--scene05 {
 		height: 300vh;
 	}
+	&--scene06 {
+		height: 300vh;
+	}
 }
 
 .scene {
@@ -135,4 +138,24 @@
 	height: 100vh;
 	width: 100%;
 	overflow: hidden;
+}
+
+// Scene 6
+.arm {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 25vw;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.doorRight {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30vw;
+	height: 100%;
+	z-index: 3;
 }
