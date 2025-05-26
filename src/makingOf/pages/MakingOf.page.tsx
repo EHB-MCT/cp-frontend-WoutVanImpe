@@ -119,10 +119,10 @@ export const MakingOf = () => {
 								}
 							}}
 						/>
-						<NavLink className={styles["p-makingOf__tailButton"]} to={link}>
+						<a className={styles["p-makingOf__tailButton"]} href={link} target="_blank" rel="noopener noreferrer">
 							<img src="./eye.svg" alt="oog icoon" />
 							<p>Bekijk sprookje</p>
-						</NavLink>
+						</a>
 					</div>
 				)}
 			</div>

@@ -33,7 +33,7 @@ export const Parallax = () => {
 			<Scene06 />
 			<Scene07 />
 			<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} className="transitionText">
-				<p style={{ textAlign: "center", marginBottom: 500, marginTop: 500 }}>De deur kraakte open. In het donker lagen ze — de vorige bruiden, roerloos en vergeten.</p>
+				<p style={{ textAlign: "center", marginBottom: 500, marginTop: 500 }}>De deur kraakte open. In het donker lagen ze, de vorige bruiden, roerloos en vergeten.</p>
 			</motion.div>
 			<Scene08 />
 			<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} className="transitionText">
