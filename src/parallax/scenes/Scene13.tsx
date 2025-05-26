@@ -19,7 +19,7 @@ const Scene13: React.FC = () => {
 	const treesY = useTransform(smoothScrollY, [0, 0.5], [700, 200]);
 
 	const endOpacity = useTransform(smoothScrollY, [0.1, 0.5], [0, 1]);
-	const endX = useTransform(smoothScrollY, [0], ["33%"]);
+	const endX = useTransform(smoothScrollY, [0], ["39%"]);
 	const endY = useTransform(smoothScrollY, [0], [200]);
 
 	return (
@@ -38,7 +38,7 @@ const Scene13: React.FC = () => {
 				</motion.div>
 
 				<motion.div className={styles.endText} style={{ opacity: endOpacity, x: endX, y: endY, zIndex: 5 }}>
-					<h1 style={{ color: "#4A5CA9", fontSize: 100 }}>Einde</h1>
+					<h1 style={{ color: "#4A5CA9", fontSize: 100 }}>EINDE</h1>
 				</motion.div>
 			</motion.div>
 		</div>
