@@ -16,3 +16,4 @@ Live link: [website.be](website.be) (optional)
 - https://stackoverflow.com/questions/72593985/in-react-how-can-i-replace-a-broken-image-with-a-default-image for the default image in MakingOf.page.tsx and SmallStoryCard.tsx
 - https://chatgpt.com/share/6831e831-5b7c-8001-ae4c-c8f4cafe85ce for the parallax in scene01
 - https://www.geeksforgeeks.org/html-favicon/ for the favicon in index.html
+- https://dev.to/rohitnirban/adding-page-titles-to-react-app-23oe for the page titles and PageTitle.tsx
