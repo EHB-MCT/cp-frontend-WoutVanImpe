@@ -1,5 +1,6 @@
-import { useRef} from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from "framer-motion";
+
 import styles from "../pages/parallax.module.scss";
 
 const Scene09 = () => {
@@ -14,6 +15,25 @@ const Scene09 = () => {
 		stiffness: 50,
 		damping: 20,
 		mass: 1,
+	});
+
+	const footSound = useRef<HTMLAudioElement | null>(null);
+	const footPlayed = useRef(false);
+
+	useEffect(() => {
+		footSound.current = new Audio("./audio/foot.wav");
+		footSound.current.volume = 0.8;
+	}, []);
+
+	useMotionValueEvent(smoothScroll, "change", (value) => {
+		if (value >= 0.4 && !footPlayed.current) {
+			footPlayed.current = true;
+			footSound.current?.play();
+		}
+
+		if (value < 0.38 && footPlayed.current) {
+			footPlayed.current = false;
+		}
 	});
 
 	const doorRotation = useTransform(smoothScroll, [0], [-90]);

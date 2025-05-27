@@ -1,5 +1,6 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from "framer-motion";
+
 import styles from "../pages/parallax.module.scss";
 
 const Scene06 = () => {
@@ -14,6 +15,25 @@ const Scene06 = () => {
 		stiffness: 50,
 		damping: 20,
 		mass: 1,
+	});
+
+	const lockSound = useRef<HTMLAudioElement | null>(null);
+	const lockPlayed = useRef(false);
+
+	useEffect(() => {
+		lockSound.current = new Audio("./audio/lock.wav");
+		lockSound.current.volume = 0.8;
+	}, []);
+
+	useMotionValueEvent(smoothScroll, "change", (value) => {
+		if (value >= 0.6 && !lockPlayed.current) {
+			lockPlayed.current = true;
+			lockSound.current?.play();
+		}
+
+		if (value < 0.58 && lockPlayed.current) {
+			lockPlayed.current = false;
+		}
 	});
 
 	const armX = useTransform(smoothScroll, [0.45, 0.6], ["-400%", "-200%"]);

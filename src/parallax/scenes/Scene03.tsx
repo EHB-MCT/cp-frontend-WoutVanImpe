@@ -1,5 +1,5 @@
-import React, { useRef} from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
 const Scene03: React.FC = () => {
@@ -26,6 +26,23 @@ const Scene03: React.FC = () => {
 	const handRightX = useTransform(smoothScrollY, [0.1, 0.45], ["100%", "0%"]);
 	const handRightY = useTransform(smoothScrollY, [0], [530]);
 	const handRightOpacity = useTransform(smoothScrollY, [0.35, 0.5], [0, 1]);
+
+	const soundPlayed = useRef(false);
+	const audio = useRef<HTMLAudioElement | null>(null);
+
+	useEffect(() => {
+		audio.current = new Audio("./audio/keys.wav");
+	}, []);
+
+	useMotionValueEvent(smoothScrollY, "change", (latest) => {
+		if (latest > 0.61 && !soundPlayed.current) {
+			soundPlayed.current = true;
+			audio.current?.play();
+		}
+		if (latest < 0.55 && soundPlayed.current) {
+			soundPlayed.current = false;
+		}
+	});
 
 	return (
 		<div ref={scrollRef} className={`${styles.container} ${styles["container--scene03"]}`}>

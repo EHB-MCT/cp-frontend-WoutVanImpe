@@ -1,5 +1,5 @@
-import { useRef} from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
 const Scene12 = () => {
@@ -16,6 +16,24 @@ const Scene12 = () => {
 		mass: 1,
 	});
 
+	const swordSound = useRef<HTMLAudioElement | null>(null);
+	const swordPlayed = useRef(false);
+
+	useEffect(() => {
+		swordSound.current = new Audio("./audio/sword.wav");
+		swordSound.current.volume = 0.8;
+	}, []);
+
+	useMotionValueEvent(smoothScroll, "change", (value) => {
+		if (value >= 0.4 && !swordPlayed.current) {
+			swordPlayed.current = true;
+			swordSound.current?.play();
+		}
+
+		if (value < 0.38 && swordPlayed.current) {
+			swordPlayed.current = false;
+		}
+	});
 
 	const swordX = useTransform(smoothScroll, [0.3, 0.6], ["-300%", "200%"]);
 	const swordY = useTransform(smoothScroll, [0, 0.2, 0.32], [0, 0, -700]);

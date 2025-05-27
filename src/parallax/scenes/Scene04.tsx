@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from "framer-motion";
+
 import styles from "../pages/parallax.module.scss";
 
 const Scene04: React.FC = () => {
@@ -16,12 +17,49 @@ const Scene04: React.FC = () => {
 		mass: 1,
 	});
 
+	const horseSound = useRef<HTMLAudioElement | null>(null);
+	const doorSound = useRef<HTMLAudioElement | null>(null);
+
+	const isHorsePlaying = useRef(false);
+	const doorPlayed = useRef(false);
+
+	useEffect(() => {
+		horseSound.current = new Audio("./audio/horse.wav");
+		horseSound.current.loop = true;
+		horseSound.current.volume = 0.6;
+
+		doorSound.current = new Audio("./audio/door.wav");
+		doorSound.current.volume = 0.8;
+	}, []);
+
+	useMotionValueEvent(smoothScroll, "change", (value) => {
+		if (value >= 0.19 && value <= 0.64) {
+			if (!isHorsePlaying.current) {
+				isHorsePlaying.current = true;
+				horseSound.current?.play();
+			}
+		} else {
+			if (isHorsePlaying.current) {
+				isHorsePlaying.current = false;
+				horseSound.current?.pause();
+				horseSound.current!.currentTime = 0;
+			}
+		}
+
+		if (value >= 0.65 && !doorPlayed.current) {
+			doorPlayed.current = true;
+			doorSound.current?.play();
+		}
+
+		if (value < 0.6 && doorPlayed.current) {
+			doorPlayed.current = false;
+		}
+	});
+
 	const skyOpacity = useTransform(smoothScroll, [0.05, 0.1], [0, 1]);
 	const skyY = useTransform(smoothScroll, [0.05, 0.1], [50, 0]);
-
 	const mountainOpacity = useTransform(smoothScroll, [0.15, 0.2], [0, 1]);
 	const mountainY = useTransform(smoothScroll, [0.15, 0.2], [50, -100]);
-
 	const pathOpacity = useTransform(smoothScroll, [0.17, 0.22], [0, 1]);
 	const pathY = useTransform(smoothScroll, [0.17, 0.22], [50, 0]);
 

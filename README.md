@@ -15,3 +15,5 @@ Live link: [ErWasEens.be](https://ehb-mct.github.io/cp-frontend-WoutVanImpe)
 - https://chatgpt.com/share/6831e831-5b7c-8001-ae4c-c8f4cafe85ce for the parallax in scene01
 - https://www.geeksforgeeks.org/html-favicon/ for the favicon in index.html
 - https://dev.to/rohitnirban/adding-page-titles-to-react-app-23oe for the page titles and PageTitle.tsx
+- https://www.w3schools.com/cssref/pr_class_cursor.php for the cursor css
+- https://chatgpt.com/share/68351462-7920-8007-99ec-ad40f4ec4a32 for all the audio setup's

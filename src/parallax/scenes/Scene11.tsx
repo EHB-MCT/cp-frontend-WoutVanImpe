@@ -1,5 +1,5 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef, useEffect } from "react";
+import { motion, useScroll, useTransform, useSpring, useMotionValueEvent } from "framer-motion";
 import styles from "../pages/parallax.module.scss";
 
 const Scene11 = () => {
@@ -14,6 +14,25 @@ const Scene11 = () => {
 		stiffness: 50,
 		damping: 20,
 		mass: 1,
+	});
+
+	const openSound = useRef<HTMLAudioElement | null>(null);
+	const openPlayed = useRef(false);
+
+	useEffect(() => {
+		openSound.current = new Audio("./audio/open.wav");
+		openSound.current.volume = 0.8;
+	}, []);
+
+	useMotionValueEvent(smoothScroll, "change", (value) => {
+		if (value >= 0.2 && !openPlayed.current) {
+			openPlayed.current = true;
+			openSound.current?.play();
+		}
+
+		if (value < 0.18 && openPlayed.current) {
+			openPlayed.current = false;
+		}
 	});
 
 	const doorRotation = useTransform(smoothScroll, [0.2, 0.5], [0, -90]);
