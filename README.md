@@ -2,7 +2,7 @@
 
 A collection of classic fairytales reimagined as immersive, interactive stories using parallax scrolling and smooth animations. Students transformed timeless narratives into visually rich digital experiences.
 
-Live link: [ErWasEens.be](https://ehb-mct.github.io/cp-frontend-WoutVanImpe) (optional)
+Live link: [ErWasEens.be](https://ehb-mct.github.io/cp-frontend-WoutVanImpe)
 
 ## Sources 🗃️
 
