@@ -34,9 +34,11 @@ export const Navigation = () => {
 		<div className={styles["navigation-bar"]}>
 			<button
 				onClick={() => {
-					setSearchMode(false);
-					setSearchTerm("");
-					resetFairytales();
+					if (searchMode) {
+						setSearchMode(false);
+						setSearchTerm("");
+						resetFairytales();
+					}
 					navigate(HOME_ROUTE.path);
 				}}
 			>
