@@ -136,7 +136,7 @@ export const MakingOf = () => {
 								}
 							}}
 						/>
-						<a className={styles["p-makingOf__tailButton"]} href={link} target="_blank" rel="noopener noreferrer">
+						<a className={styles["p-makingOf__tailButton"]} href={link}>
 							<img src="./eye.svg" alt="oog icoon" />
 							<p>Bekijk sprookje</p>
 						</a>
