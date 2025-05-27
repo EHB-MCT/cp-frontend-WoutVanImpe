@@ -3,7 +3,6 @@ import { useParams } from "react-router";
 import { useFairytales } from "~context/FairytaleContext";
 import { useEffect, useState } from "react";
 import { LoadingSpinner } from "~shared/components/loadingSpinner/LoadingSpinner";
-import { PARALLAX_ROUTE } from "../../parallax/pages/parallax.route";
 import { Spacer } from "~shared/components/spacer/Spacer";
 
 const DEFAULT_FAIRYTALE = {
@@ -20,7 +19,7 @@ const DEFAULT_FAIRYTALE = {
 	imgBanner: "./banner.png",
 	imgThumbnail: "./extra1.png",
 	imgsExtra: ["./extra2.png", "./extra3.png", "./extra4.png"],
-	fairytaleLink: PARALLAX_ROUTE.path,
+	fairytaleLink: "https://ehb-mct.github.io/cp-frontend-WoutVanImpe/#/fairytale",
 };
 
 const fallbackBanner = "./no-banner.png";
