@@ -13,9 +13,9 @@ const DEFAULT_FAIRYTALE = {
 	genre: "Horror",
 	description:
 		"Blauwbaard is een duister sprookje vol mysterie en verboden geheimen. Het gaat over een rijk, maar zonderlinge edelman met een blauwe baard die al meerdere keren getrouwd is geweest, maar niemand weet wat er met zijn vorige vrouwen is gebeurd. Wanneer hij opnieuw trouwt, geeft hij zijn jonge bruid de sleutels van zijn kasteel, met één strikte regel: één kamertje mag ze nooit betreden. De verleiding blijkt te groot, en achter die verboden deur ontdekt ze een huiveringwekkend geheim… het lot van haar voorgangsters. Wanneer Blauwbaard haar daad ontdekt, dreigt ook zij zijn volgende slachtoffer te worden. Maar kan ze hem nog op tijd ontvluchten?",
-	parallaxDescription:
+	parallaxInfo:
 		"Voor dit project heb ik een klassieke vertelling vertaald naar een interactieve beleving met parallax scrolling. Door meerdere lagen visueel te scheiden en met verschillende snelheden te bewegen tijdens het scrollen, creëert de parallax een dieptegevoel en meer dynamiek in de scenes. Met Framer Motion heb ik vloeiende animaties toegevoegd om acties als het openen van deuren, het bewegen van personages en het verschijnen van teksten soepel te laten verlopen. Zo ontstaat een meeslepende en visueel rijke ervaring die de gebruiker door het verhaal leidt zonder de browser te verlaten.",
-	imagesDescription:
+	imgsInfo:
 		"De beelden voor dit project zijn gecreëerd met Adobe Firefly en geïnspireerd op een woodcut-achtige, middeleeuwse en vintage horrorstijl. Ze combineren scherpe, grove lijnen met een donker, sfeervol palet om een authentiek middeleeuws gevoel op te roepen. Deze visuele stijl versterkt de mystiek en het onheilspellende karakter van het verhaal, waardoor de scenes aanvoelen als oude houtsneden uit een vergeten griezelvertelling.",
 	imgBanner: "./banner.png",
 	imgThumbnail: "./extra1.png",
@@ -38,8 +38,8 @@ export const MakingOf = () => {
 	const author = fairytale.storyFrom || DEFAULT_FAIRYTALE.storyFrom;
 	const genre = fairytale.genre || DEFAULT_FAIRYTALE.genre;
 	const description = fairytale.description || DEFAULT_FAIRYTALE.description;
-	const parallaxDescription = fairytale.parallaxInfo || DEFAULT_FAIRYTALE.parallaxDescription;
-	const imgDescription = fairytale.imgsInfo || DEFAULT_FAIRYTALE.imagesDescription;
+	const parallaxDescription = fairytale.parallaxInfo || DEFAULT_FAIRYTALE.parallaxInfo;
+	const imgDescription = fairytale.imgsInfo || DEFAULT_FAIRYTALE.imgsInfo;
 	const link = fairytale.fairytaleLink || DEFAULT_FAIRYTALE.fairytaleLink;
 
 	const banner = fairytale.imgBanner === "" ? fallbackBanner : fairytale.imgBanner ?? DEFAULT_FAIRYTALE.imgBanner;
@@ -106,7 +106,7 @@ export const MakingOf = () => {
 
 			<div className={styles["p-makingOf__info"]}>
 				<div className={styles["p-makingOf__info__text"]}>
-					<h5>Verhaal</h5>
+					<h5 style={{ marginTop: 0 }}>Verhaal</h5>
 					<p>{description}</p>
 					{showMore && (
 						<div className={styles["p-makingOf__extraInfo"]}>
