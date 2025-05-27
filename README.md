@@ -17,3 +17,4 @@ Live link: [ErWasEens.be](https://ehb-mct.github.io/cp-frontend-WoutVanImpe)
 - https://dev.to/rohitnirban/adding-page-titles-to-react-app-23oe for the page titles and PageTitle.tsx
 - https://www.w3schools.com/cssref/pr_class_cursor.php for the cursor css
 - https://chatgpt.com/share/68351462-7920-8007-99ec-ad40f4ec4a32 for all the audio setup's
+- canvas for the basics of react en framer-motion
