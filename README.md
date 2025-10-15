@@ -1,20 +1,71 @@
-# ER WAS EENS... ✨
+# ER WAS EENS... ✨  
+Een studentenproject waarin klassieke sprookjes worden herverteld als interactieve digitale verhalen met parallax-effecten en animatie. Ontwikkeld als onderdeel van de opleiding Multimedia en Creatieve Technologie aan de Erasmushogeschool Brussel.
 
-A collection of classic fairytales reimagined as immersive, interactive stories using parallax scrolling and smooth animations. Students transformed timeless narratives into visually rich digital experiences.
+[🔗 Bekijk live](https://ehb-mct.github.io/cp-frontend-WoutVanImpe/)
 
-Live link: [ErWasEens.be](https://ehb-mct.github.io/cp-frontend-WoutVanImpe)
+---
 
-## Sources 🗃️
+## 📖 Projectomschrijving
 
-- https://chatgpt.com/share/681c7bed-40f0-800b-bc9d-262669d798a2 for custom paths in tsconfig.app.json
-- https://stackoverflow.com/questions/12991351/how-to-force-image-resize-and-keep-aspect-ratio for the image styling of the smallCards in home.module.scss
-- https://chatgpt.com/c/682b359a-e1b0-8003-9c27-c03492243c00 for the deployment on github
-- https://stackoverflow.com/questions/9586278/javascript-variable-fallback for the fallback variables in MakingOf.page.tsx
-- https://chatgpt.com/share/682e286b-f388-8003-89e4-9dfad0b85748 for the ScrollToTop.tsx
-- https://stackoverflow.com/questions/72593985/in-react-how-can-i-replace-a-broken-image-with-a-default-image for the default image in MakingOf.page.tsx and SmallStoryCard.tsx
-- https://chatgpt.com/share/6831e831-5b7c-8001-ae4c-c8f4cafe85ce for the parallax in scene01
-- https://www.geeksforgeeks.org/html-favicon/ for the favicon in index.html
-- https://dev.to/rohitnirban/adding-page-titles-to-react-app-23oe for the page titles and PageTitle.tsx
-- https://www.w3schools.com/cssref/pr_class_cursor.php for the cursor css
-- https://chatgpt.com/share/68351462-7920-8007-99ec-ad40f4ec4a32 for all the audio setup's
-- canvas for the basics of react en framer-motion
+Dit project bestaat uit twee delen:
+
+1. 🌐 De portaalwebsite  
+   Een centrale applicatie waar bezoekers verschillende sprookjes kunnen ontdekken. Je kunt sprookjes filteren op genre, zoeken op naam of willekeurig laten weergeven via een shuffle-functie. De portaal bevat ook een over-ons-pagina en een “Making Of”.
+
+    🔗 Live bekijken: [Portaalwebsite](https://ehb-mct.github.io/cp-frontend-WoutVanImpe/)
+
+     Belangrijke technologieën:
+     - React + TypeScript
+     - React Router (HashRouter)
+     - React Query
+     - Context API
+     - SCSS Modules
+     - Vite
+
+2. 🏰 De parallax storytelling-ervaring  
+   Een scroll-gebaseerde, visueel meeslepende webpagina waarin een sprookje wordt verteld via gelaagde scènes. Elk grafisch element — zoals lucht, bergen, kasteel en bomen — beweegt met eigen snelheid en timing, waardoor een sfeervolle en dynamische vertelling ontstaat.
+
+    🔗 Live bekijken: [Parallax fairytale](https://ehb-mct.github.io/cp-frontend-WoutVanImpe/#/fairytale)
+
+     Gebouwd met:
+     - React
+     - TypeScript
+     - Framer Motion (useScroll, useTransform)
+     - SCSS Modules  
+  
+     Alle visuals zijn ontworpen in een middeleeuwse “woodcut”-stijl om de mysterieuze sfeer te versterken.
+
+---
+
+## ⚙️ Functionaliteiten
+
+- 🔎 Zoek- en filtersysteem op naam en genre  
+- 🔀 Shuffle-mechanisme voor willekeurige suggesties  
+- 🖼️ Dynamische layout afhankelijk van route (klassieke of parallaxweergave) 
+- 💬 Making Of & Over Ons-secties  
+- 📚 Modulaire opbouw met herbruikbare componenten
+
+---
+
+
+## 💡 Bronnen & inspiratie
+
+- tsconfig paths: https://chatgpt.com/share/681c7bed-40f0-800b-bc9d-262669d798a2  
+- image styling: https://stackoverflow.com/questions/12991351  
+- GitHub deployment: https://chatgpt.com/c/682b359a-e1b0-8003-9c27-c03492243c00  
+- fallback JS-variabelen: https://stackoverflow.com/questions/9586278  
+- ScrollToTop.tsx setup: https://chatgpt.com/share/682e286b-f388-8003-89e4-9dfad0b85748  
+- default image fallback: https://stackoverflow.com/questions/72593985  
+- parallax-animatie: https://chatgpt.com/share/6831e831-5b7c-8001-ae4c-c8f4cafe85ce  
+- favicon toevoegen: https://www.geeksforgeeks.org/html-favicon/  
+- paginatitels: https://dev.to/rohitnirban/adding-page-titles-to-react-app-23oe  
+- CSS cursors: https://www.w3schools.com/cssref/pr_class_cursor.php  
+- audio setup (canvas): https://chatgpt.com/share/68351462-7920-8007-99ec-ad40f4ec4a32  
+
+---
+
+## 🧑‍💻 Ontwikkelaar
+
+Wout Van Impe  
+[GitHub-profiel](https://github.com/woutvanimpe)
+
